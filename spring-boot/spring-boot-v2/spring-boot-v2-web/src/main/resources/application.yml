@@ -4,4 +4,4 @@ server:
 app.name: hello
 spring:
   main:
-    banner-mode: 'log'
+    banner-mode: 'console'
