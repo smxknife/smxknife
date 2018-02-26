@@ -1,4 +1,4 @@
-package com.smxknife.springboot.v2;
+package com.smxknife.springboot.v1.ex02;
 
 import org.springframework.boot.Banner;
 import org.springframework.core.env.Environment;

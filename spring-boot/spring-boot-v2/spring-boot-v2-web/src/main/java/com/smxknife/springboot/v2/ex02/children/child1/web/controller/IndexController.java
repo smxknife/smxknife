@@ -1,4 +1,4 @@
-package com.smxknife.springboot.v2.web.controller;
+package com.smxknife.springboot.v2.ex02.children.child1.web.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
 
-	@GetMapping
-	public String index() {
-		return "index";
-	}
+    @GetMapping
+    public String index() {
+        return "child1 index";
+    }
 }

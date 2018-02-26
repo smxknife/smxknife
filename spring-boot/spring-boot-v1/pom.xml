@@ -9,11 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.smxknife.springboot</groupId>
-    <artifactId>spring-boot-v2</artifactId>
+    <artifactId>spring-boot-v1</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-boot-v2-web</module>
+        <module>spring-boot-v1-web</module>
     </modules>
 
     <dependencyManagement>
@@ -22,7 +21,7 @@
                 <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.0.0.RC2</version>
+                <version>1.5.10.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -34,7 +33,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--<version>2.0.0.BUILD-SNAPSHOT</version>-->
             </plugin>
         </plugins>
     </build>

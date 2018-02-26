@@ -1,9 +1,8 @@
-package com.smxknife.springboot.v2;
+package com.smxknife.springboot.v2.ex01;
 
-import com.smxknife.springboot.v2.config.AppConfig;
+import com.smxknife.springboot.v2.AppBanner;
+import com.smxknife.springboot.v2.ex01.config.AppConfig;
 import org.springframework.boot.SpringApplication;
-
-import java.util.Set;
 
 public class AppBoot1 {
     public static void main(String[] args) {

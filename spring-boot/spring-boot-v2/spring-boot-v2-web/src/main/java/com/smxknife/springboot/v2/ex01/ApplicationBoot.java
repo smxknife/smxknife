@@ -1,9 +1,12 @@
-package com.smxknife.springboot.v2;
+package com.smxknife.springboot.v2.ex01;
 
+import com.smxknife.springboot.v2.AppBanner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
+@PropertySource(value = "classpath:parent.properties")
 public class ApplicationBoot {
 	public static void main(String[] args) {
 		System.setProperty("spring.devtools.restart.enabled", "false");
