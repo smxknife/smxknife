@@ -1,9 +1,0 @@
-${application.version}
-${application.formatted-version}
-${spring-boot.version}
-${spring-boot.formatted-version}
-${Ansi.NAME}
-${AnsiColor.NAME}
-${AnsiBackground.NAME}
-${AnsiStyle.NAME}
-${application.title}

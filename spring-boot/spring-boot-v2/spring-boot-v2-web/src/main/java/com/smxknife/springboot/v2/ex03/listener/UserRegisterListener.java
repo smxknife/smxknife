@@ -3,7 +3,6 @@ package com.smxknife.springboot.v2.ex03.listener;
 import com.smxknife.springboot.v2.ex03.domain.User;
 import com.smxknife.springboot.v2.ex03.event.UserRegisterEvent;
 import com.smxknife.springboot.v2.ex03.service.UserService;
-import com.smxknife.springboot.v2.ex03.service.impl.UserServiceImpl;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.event.SmartApplicationListener;
 import org.springframework.lang.Nullable;
@@ -45,6 +44,6 @@ public class UserRegisterListener implements SmartApplicationListener {
      */
     @Override
     public int getOrder() {
-        return 0;
+        return 3;
     }
 }
