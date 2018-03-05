@@ -12,8 +12,10 @@
     <groupId>com.smxknife.springboot</groupId>
     <artifactId>spring-boot-v2</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>spring-boot-v2-web</module>
+        <module>spring-boot-v2-config</module>
     </modules>
 
     <dependencyManagement>

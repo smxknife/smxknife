@@ -19,6 +19,6 @@ public class OddDemo3 {
 	}
 
 	public static boolean isOdd2(int i) {
-		return (i & 2) == 1;
+		return (i & 1) == 1;
 	}
 }
