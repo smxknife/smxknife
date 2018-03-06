@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-boot-v1-web</module>
+        <module>spring-boot-v1-config</module>
     </modules>
 
     <dependencyManagement>

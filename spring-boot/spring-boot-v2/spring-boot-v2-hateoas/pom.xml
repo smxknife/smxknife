@@ -10,16 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.smxknife.springboot</groupId>
-    <artifactId>spring-boot-v2-config</artifactId>
+    <artifactId>spring-boot-v2-hateoas</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
     </dependencies>
 
