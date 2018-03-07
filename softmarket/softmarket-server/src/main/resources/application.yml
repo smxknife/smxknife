@@ -1,3 +1,18 @@
 wechat.token: adminqazxsw123
 server:
   port: 10001
+
+spring:
+  datasource:
+    url: jdbc:h2:file:~/.h2/testdb
+    driverClassName: org.h2.Driver
+    username: root
+    password: root
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
