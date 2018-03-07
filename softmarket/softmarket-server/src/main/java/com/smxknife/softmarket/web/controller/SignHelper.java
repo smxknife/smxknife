@@ -10,7 +10,7 @@ import java.util.Arrays;
 @Component
 public class SignHelper {
 
-	@Value("{wechat.token}")
+	@Value("${wechat.token}")
 	String token;
 
 	public boolean checkSignature(String signature, String timestamp, String notice) {
