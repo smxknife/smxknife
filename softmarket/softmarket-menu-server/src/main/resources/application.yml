@@ -1,0 +1,59 @@
+wechat:
+  api:
+    menu:
+      base: https://api.weixin.qq.com/cgi-bin/menu
+      create: ${wechat.api.menu.base}/create?access_token=
+      get: ${wechat.api.menu.base}/get?access_token=
+      delete: ${wechat.api.menu.base}/delete?access_token=
+      addconditional: ${wechat.api.menu.base}/addconditional?access_token=
+
+server:
+  port: 10002
+spring:
+  profiles:
+    active: dev
+  jpa:
+      generate-ddl: true
+      hibernate:
+        ddl-auto: update #create-drop
+      properties:
+        hibernate:
+          format_sql: true
+      show-sql: true
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/softmarket?autoReconnect=true&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: root
+
+wechat:
+  accessToken:
+    host: localhost
+    port: 8080
+    api: /wechat/accessToken
+    url: http://${wechat.accessToken.host}:${wechat.accessToken.port}/${wechat.accessToken.api}
+---
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://softmarket-mysql:3306/softmarket?autoReconnect=true&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: root
+
+wechat:
+  accessToken:
+    host: accesstoken
+    port: 8080
+    api: /wechat/accessToken
+    url: http://${wechat.accessToken.host}:${wechat.accessToken.port}/${wechat.accessToken.api}
+
+---
+spring:
+  profiles: test
+  datasource:
+    platform: h2

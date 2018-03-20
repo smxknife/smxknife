@@ -1,0 +1,44 @@
+wechat:
+  token: adminqazxsw123
+  appId: wx2a14718eae9bbd71
+  appsecret: 8fcf52f2aa42db364cc6503a87659505
+  accessTokenUrl: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${wechat.appId}&secret=${wechat.appsecret}
+
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+  jpa:
+      generate-ddl: true
+      hibernate:
+        ddl-auto: update #create-drop
+      properties:
+        hibernate:
+          format_sql: true
+      show-sql: true
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/softmarket?autoReconnect=true&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: root
+
+---
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://softmarket-mysql:3306/softmarket?autoReconnect=true&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: root
+
+---
+spring:
+  profiles: test
+  datasource:
+    platform: h2
+

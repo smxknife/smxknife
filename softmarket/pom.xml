@@ -9,6 +9,11 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>softmarket-server</module>
+        <module>softmarket-accesstoken-server</module>
+        <module>softmarket-menu-server</module>
+        <module>softmarket-common-plugin</module>
+        <module>softmarket-sendmsg-server</module>
+        <module>softmarket-usermgr-server</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -39,26 +44,6 @@
             </snapshots>
         </repository>
     </repositories>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-        <!-- 配置java版本 不配置的话默认父类配置的是1.6-->
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 
 
 </project>

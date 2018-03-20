@@ -1,18 +1,40 @@
-wechat.token: adminqazxsw123
+wechat:
+  token: adminqazxsw123
+
 server:
   port: 10001
-
 spring:
+  profiles:
+    active: dev
+  jpa:
+      generate-ddl: true
+      hibernate:
+        ddl-auto: update #create-drop
+      properties:
+        hibernate:
+          format_sql: true
+      show-sql: true
+
+---
+spring:
+  profiles: dev
   datasource:
-    url: jdbc:h2:file:~/.h2/testdb
-    driverClassName: org.h2.Driver
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/softmarket?autoReconnect=true&useSSL=false&characterEncoding=utf-8
     username: root
     password: root
-  jpa:
-    generate-ddl: true
-    hibernate:
-      ddl-auto: create-drop
-    properties:
-      hibernate:
-        format_sql: true
-    show-sql: true
+
+---
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://softmarket-mysql:3306/softmarket?autoReconnect=true&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: root
+
+---
+spring:
+  profiles: test
+  datasource:
+    platform: h2

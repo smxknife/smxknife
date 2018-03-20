@@ -1,26 +1,28 @@
 package com.smxknife.softmarket.web.controller;
 
+import com.smxknife.softmarket.service.WeChatService;
+import com.smxknife.softmarket.util.WeChatUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@Controller
+@RestController
 @RequestMapping("/wechat")
-public class WechatController {
+public class WeChatController {
 
-	private static Logger logger = Logger.getLogger(WechatController.class);
+	private static Logger logger = Logger.getLogger(WeChatController.class);
+
+	@Value("${wechat.token}")
+	String token;
 
 	@Autowired
-	SignHelper signHelper;
+	WeChatService weChatService;
 
 	@GetMapping("security")
 	public void doGet(HttpServletRequest request,
@@ -34,7 +36,7 @@ public class WechatController {
 			logger.info(">>>> timestamp: " + timestamp);
 			logger.info(">>>> nonce: " + nonce);
 			logger.info(">>>> echostr: " + echostr);
-			if (signHelper.checkSignature(signature, timestamp, nonce)) {
+			if (WeChatUtil.checkSignature(signature, timestamp, nonce, token)) {
 				PrintWriter out = response.getWriter();
 				out.print(echostr);
 				out.close();
@@ -48,8 +50,9 @@ public class WechatController {
 	}
 
 	@PostMapping("security")
-	public void doPost() {
-		logger.info("post method！");
+	public String doPost(HttpServletRequest request) {
+		return weChatService.processRequest(request);
 	}
+
 
 }
