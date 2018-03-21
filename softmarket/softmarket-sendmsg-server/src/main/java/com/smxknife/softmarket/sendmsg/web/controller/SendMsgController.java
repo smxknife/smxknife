@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -41,6 +42,19 @@ public class SendMsgController {
 		SendMsg sendMsg = new SendMsg();
 		SendMsg.Filter filter = sendMsg.new Filter();
 		filter.setIs_to_all(true);
+		sendMsg.setFilter(filter);
+		sendMsg.setMsgtype(SendMsg.MsgType.text);
+		sendMsg.getText().setContent("softmarket 模拟推送" + new Random().nextInt());
+
+		return sendMsgService.sendAll(sendMsg);
+	}
+
+	@GetMapping("mockAllTag")
+	public String mockAllTag() {
+		SendMsg sendMsg = new SendMsg();
+		SendMsg.Filter filter = sendMsg.new Filter();
+		filter.setIs_to_all(false);
+		filter.setTag_id(Arrays.asList());
 		sendMsg.setFilter(filter);
 		sendMsg.setMsgtype(SendMsg.MsgType.text);
 		sendMsg.getText().setContent("softmarket 模拟推送" + new Random().nextInt());

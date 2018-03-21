@@ -49,8 +49,6 @@ public class MsgServiceFactory {
 			case event:
 				reqMsgService = applicationContext.getBean(WeChatConstant.EVENT_REQ_MSG_SERVICE, ReqMsgService.class);
 				break;
-			case MASSSENDJOBFINISH:
-				reqMsgService = applicationContext.getBean(WeChatConstant.MASSSENDJOBFINISH_REQ_MSG_SERVICE, ReqMsgService.class);
 			default:
 				logger.error("request MsgType is not validate");
 				break;

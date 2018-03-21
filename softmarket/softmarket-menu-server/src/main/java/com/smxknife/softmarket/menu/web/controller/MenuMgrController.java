@@ -83,7 +83,13 @@ public class MenuMgrController {
 		rtSub1.setPagePath("pages/xingseapp/index");
 		rtSub1.setUrl("http://www.xingseapp.com/");
 		rtSub1.setParent(rightRoot);
-		rightSub.add(rtSub1);
+//		rightSub.add(rtSub1);
+
+		Button rtSub2 = new Button();
+		rtSub2.setName("优能利");
+		rtSub2.setType(ButtonType.view);
+		rtSub2.setUrl("http://101.37.78.224:8081/login");
+		rightSub.add(rtSub2);
 
 		Menu menu = new Menu();
 		menu.setButtons(new ArrayList<>());

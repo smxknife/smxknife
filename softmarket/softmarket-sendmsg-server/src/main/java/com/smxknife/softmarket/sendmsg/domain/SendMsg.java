@@ -1,6 +1,6 @@
 package com.smxknife.softmarket.sendmsg.domain;
 
-import java.util.Set;
+import java.util.List;
 
 public class SendMsg {
 
@@ -151,7 +151,7 @@ public class SendMsg {
 
 		private boolean is_to_all = true;
 
-		Set<Long> tag_id;
+		List<Long> tag_id;
 
 		public boolean isIs_to_all() {
 			return is_to_all;
@@ -161,11 +161,11 @@ public class SendMsg {
 			this.is_to_all = is_to_all;
 		}
 
-		public Set<Long> getTag_id() {
+		public List<Long> getTag_id() {
 			return tag_id;
 		}
 
-		public void setTag_id(Set<Long> tag_id) {
+		public void setTag_id(List<Long> tag_id) {
 			this.tag_id = tag_id;
 		}
 	}
