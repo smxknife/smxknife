@@ -1,4 +1,4 @@
 package com.smxknife.java.ex3;
 
-public class PolyMain {
+public interface Sky {
 }

@@ -17,6 +17,7 @@
         <module>spring-boot-v2-web</module>
         <module>spring-boot-v2-config</module>
         <module>spring-boot-v2-hateoas</module>
+        <module>spring-boot-v2-responsebody-requestbody</module>
     </modules>
 
     <dependencyManagement>
