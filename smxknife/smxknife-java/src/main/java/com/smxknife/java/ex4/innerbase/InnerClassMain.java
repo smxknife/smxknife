@@ -1,4 +1,4 @@
-package com.smxknife.java.ex4;
+package com.smxknife.java.ex4.innerbase;
 
 public class InnerClassMain {
 	public static void main(String[] args) {
@@ -9,5 +9,11 @@ public class InnerClassMain {
 		System.out.println(bird.getType());
 
 		Animal.Fish fish = new Animal.Fish();
+	}
+
+	public Animal test() {
+		return new Animal() {
+
+		};
 	}
 }
