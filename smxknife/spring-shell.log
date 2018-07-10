@@ -1,0 +1,38 @@
+// dataflow 1.2.0.RELEASE log opened at 2018-07-03 17:49:18
+// dataflow 1.2.0.RELEASE log opened at 2018-07-03 20:08:25
+app register --name dataflow-source --type source --uri maven://com.smxknife:dataflow-source:jar:1.0-SNAPSHOT
+app register --name dataflow-processor --type source --uri maven://com.smxknife:dataflow-processor:jar:1.0-SNAPSHOT
+app register --name dataflow-sink --type source --uri maven://com.smxknife:dataflow-sink:jar:1.0-SNAPSHOT
+// [failed] stream create --name time-to-log --definition 'dataflow-source | dataflow-processor | dataflow-sink'
+// dataflow 1.2.0.RELEASE log opened at 2018-07-03 22:13:10
+app register --name dataflow-source --type source --uri maven://com.smxknife:dataflow-source:jar:1.0-SNAPSHOT
+app register --name dataflow-processor --type processor --uri maven://com.smxknife:dataflow-processor:jar:1.0-SNAPSHOT
+app register --name dataflow-sink --type sink --uri maven://com.smxknife:dataflow-sink:jar:1.0-SNAPSHOT
+stream create --name time-to-log --definition 'dataflow-source | dataflow-processor | dataflow-sink'
+// [failed] stream deploy --name time-to-log
+// [failed] stream deploy --name time-to-log
+// dataflow 1.2.0.RELEASE log opened at 2018-07-03 22:28:55
+app register --name dataflow-source --type source --uri maven://com.smxknife:dataflow-source:jar:1.0-SNAPSHOT
+app register --name dataflow-processor --type processor --uri maven://com.smxknife:dataflow-processor:jar:1.0-SNAPSHOT
+app register --name dataflow-sink --type sink --uri maven://com.smxknife:dataflow-sink:jar:1.0-SNAPSHOT
+stream create --name time-to-log --definition 'dataflow-source | dataflow-processor | dataflow-sink'
+// [failed] stream deploy --name time-to-log
+// [failed] stream list
+// [failed] app list
+// [failed] stream list
+app register --name timestamp --type task --uri maven://org.springframework.cloud.task.app:timestamp-task:1.3.0.RELEASE
+task create --name printTimeStamp --definition "timestamp"
+// dataflow 1.2.0.RELEASE log opened at 2018-07-04 13:21:26
+// [failed] task execution list
+// dataflow 1.2.0.RELEASE log opened at 2018-07-04 14:56:03
+app register --name dataflow-source --type source --uri maven://com.smxknife:dataflow-source:jar:1.0-SNAPSHOT
+app register --name dataflow-processor --type processor --uri maven://com.smxknife:dataflow-processor:jar:1.0-SNAPSHOT
+app register --name dataflow-sink --type sink --uri maven://com.smxknife:dataflow-sink:jar:1.0-SNAPSHOT
+app register --name ds --type source --uri maven://com.smxknife:dataflow-source:jar:1.0-SNAPSHOT
+app register --name dp --type processor --uri maven://com.smxknife:dataflow-processor:jar:1.0-SNAPSHOT
+app register --name dk --type sink --uri maven://com.smxknife:dataflow-sink:jar:1.0-SNAPSHOT
+stream create --name time-to-log --definition 'ds | dp | dk'
+// [failed] stream deploy --name time-to-log
+// dataflow 1.2.0.RELEASE log opened at 2018-07-04 15:10:18
+dataflow config server
+dataflow config server --username root --password root

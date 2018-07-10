@@ -12,12 +12,42 @@
         <module>smxknife-java</module>
         <module>smxknife-cassandra</module>
         <module>smxknife-quartz</module>
+        <module>smxknife-jmx</module>
+        <module>smxknife-cglib</module>
+        <module>smxknife-graphql</module>
+        <module>smxknife-flowable</module>
+        <module>smxknife-http</module>
+        <module>smxknife-springcloud</module>
+        <module>smxknife-rxjava</module>
+        <module>smxknife-netty</module>
     </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <repositories>
+        <!--<repository>-->
+            <!--<id>spring-libs-milestones</id>-->
+            <!--<url>http://repo.spring.io/libs-milestone</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+        <!--<id>spring-milestones</id>-->
+        <!--<url>https://repo.spring.io/milestone</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+        <!--<id>central</id>-->
+        <!--<url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+        <!--<name>ALiYun Repository</name>-->
+        <!--</repository>-->
+
+        <!--<repository>-->
+        <!--<id>spring-snapshots</id>-->
+        <!--<url>https://repo.spring.io/snapshot</url>-->
+        <!--<snapshots><enabled>true</enabled></snapshots>-->
+        <!--</repository>-->
+    </repositories>
 
 
 </project>

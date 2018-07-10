@@ -19,6 +19,7 @@
         <module>spring-boot-v2-hateoas</module>
         <module>spring-boot-v2-responsebody-requestbody</module>
         <module>spring-boot-v2-cassandra</module>
+        <module>spring-boot-v2-controlleraop</module>
     </modules>
 
     <dependencyManagement>
