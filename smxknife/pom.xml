@@ -20,6 +20,7 @@
         <module>smxknife-springcloud</module>
         <module>smxknife-rxjava</module>
         <module>smxknife-netty</module>
+        <module>smxknife-jvm</module>
     </modules>
 
     <properties>
