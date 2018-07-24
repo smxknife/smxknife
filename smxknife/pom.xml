@@ -20,6 +20,8 @@
         <module>smxknife-springcloud</module>
         <module>smxknife-rxjava</module>
         <module>smxknife-netty</module>
+        <module>smxknife-network</module>
+        <module>smxknife-jms</module>
     </modules>
 
     <properties>
