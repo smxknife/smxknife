@@ -22,6 +22,7 @@
         <module>smxknife-netty</module>
         <module>smxknife-network</module>
         <module>smxknife-jms</module>
+        <module>smxknife-jvm</module>
     </modules>
 
     <properties>
