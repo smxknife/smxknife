@@ -23,11 +23,17 @@
         <module>smxknife-network</module>
         <module>smxknife-jms</module>
         <module>smxknife-jvm</module>
+        <module>smxknife-jmh</module>
+        <module>smxknife-shardingsphere</module>
+        <module>smxknife-guava</module>
+        <module>smxknife-ebean</module>
+        <module>smxknife-apache</module>
     </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <projectlombok.version>1.18.2</projectlombok.version>
     </properties>
 
     <repositories>

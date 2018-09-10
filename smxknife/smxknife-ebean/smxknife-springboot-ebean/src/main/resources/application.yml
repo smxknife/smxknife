@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    io.ebean:
+      SQL: DEBUG
+      TXN: DEBUG
+      DDL: DEBUG
+
+datasource:
+  db:
+    username: root
+    password: root
+    databaseUrl: jdbc:mysql://localhost:3306/db?characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    databaseDriver: com.mysql.jdbc.Driver

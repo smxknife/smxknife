@@ -1,0 +1,22 @@
+server:
+  port: 10004
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+
+eureka:
+  instance:
+#   instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${server.port}}
+    hostname: localhost
+#    prefer-ip-address: true
+#    status-page-url: ${server.servletPath}/info
+#    health-check-url: ${server.servletPath}/health
+#    homePageUrl: ${server.servletPath}/home
+  client:
+    healthcheck:
+      enable: true
+    service-url:
+      defaultZone: http://admin:111111@localhost:8761/eureka/
+
