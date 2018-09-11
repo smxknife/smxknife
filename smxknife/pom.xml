@@ -36,6 +36,15 @@
         <projectlombok.version>1.18.2</projectlombok.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${projectlombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
     <repositories>
         <!--<repository>-->
             <!--<id>spring-libs-milestones</id>-->
