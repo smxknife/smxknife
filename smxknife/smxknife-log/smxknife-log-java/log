@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-09-12T14:31:46</date>
+  <millis>1536733906938</millis>
+  <sequence>2</sequence>
+  <logger>0</logger>
+  <level>SEVERE</level>
+  <class>com.smxknife.log.java.demo01.HandlerDemo</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>test serve</message>
+</record>
+</log>
