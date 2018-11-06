@@ -28,7 +28,7 @@ public class FromDemo {
 //		fromArrayTest();
 
 		// fromCallable support Flowable, Observable, Maybe, Single, Completable
-//		fromCallableTest();
+		fromCallableTest();
 
 		// fromAction support Maybe, Completable
 //		fromActionTest();
@@ -37,7 +37,7 @@ public class FromDemo {
 //		fromRunnableTest();
 
 		// fromFuture support Flowable, Observable, Maybe, Single, Completable
-		fromFutureTest();
+//		fromFutureTest();
 	}
 
 	private static void fromFutureTest() {

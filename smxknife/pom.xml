@@ -28,6 +28,8 @@
         <module>smxknife-guava</module>
         <module>smxknife-ebean</module>
         <module>smxknife-apache</module>
+        <module>smxknife-log</module>
+        <module>smxknife-jdk</module>
     </modules>
 
     <properties>

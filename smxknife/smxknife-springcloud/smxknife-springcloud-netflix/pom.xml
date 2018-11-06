@@ -24,6 +24,8 @@
         <module>springcloud-netflix-eureka-feign-hystrix</module>
         <module>springcloud-netflix-eureka-hystrix-dashboard</module>
         <module>springcloud-netflix-eureka-hystrix-turbine</module>
+        <module>springcloud-netflix-eureka-zuul</module>
+        <module>springcloud-netflix-eureka-fileupload</module>
     </modules>
 
     <properties>
