@@ -1,4 +1,4 @@
-package com.smxknife.netty.demo02;
+package com.smxknife.netty.bio;
 
 import java.io.BufferedReader;
 import java.io.IOException;

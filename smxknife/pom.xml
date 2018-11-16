@@ -30,6 +30,8 @@
         <module>smxknife-apache</module>
         <module>smxknife-log</module>
         <module>smxknife-jdk</module>
+        <module>smxknife-utils</module>
+        <module>smxknife-asm</module>
     </modules>
 
     <properties>

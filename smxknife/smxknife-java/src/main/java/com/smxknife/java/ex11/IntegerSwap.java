@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 public class IntegerSwap {
 
 	public static void main(String[] args) {
+		System.out.println();
 		Integer a = 1;
 		Integer b = 2;
 		System.out.printf("a = %s, b = %s\n", a, b);
