@@ -32,6 +32,7 @@
         <module>smxknife-jdk</module>
         <module>smxknife-utils</module>
         <module>smxknife-asm</module>
+        <module>smxknife-elasticjob</module>
     </modules>
 
     <properties>
