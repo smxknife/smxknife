@@ -1,7 +1,5 @@
 package com.smxknife.netty.nio;
 
-import io.netty.util.internal.StringUtil;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -24,7 +22,7 @@ public class TimeClientHandler implements Runnable {
 	private volatile boolean stop;
 
 	public TimeClientHandler(String host, int port) {
-		this.host = StringUtil.isNullOrEmpty(host) ? "127.0.0.1" : host;
+		this.host = (host == null || "".equals(host)) ? "127.0.0.1" : host;
 		this.port = port;
 
 		try {

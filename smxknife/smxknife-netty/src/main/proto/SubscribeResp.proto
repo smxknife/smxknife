@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "com.smxknife.netty.demo08";
+option java_outer_classname = "SubscribeRespProto";
+
+message SubscribeResp {
+    int32 subReqId = 1;
+    string respCode = 2;
+    string desc = 3;
+}

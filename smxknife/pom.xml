@@ -33,6 +33,7 @@
         <module>smxknife-utils</module>
         <module>smxknife-asm</module>
         <module>smxknife-elasticjob</module>
+        <module>smxknife-caffeine</module>
     </modules>
 
     <properties>
@@ -71,6 +72,20 @@
         <!--<snapshots><enabled>true</enabled></snapshots>-->
         <!--</repository>-->
     </repositories>
+
+    <build>
+        <plugins>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-release-plugin</artifactId>-->
+                <!--<version>2.5.3</version>-->
+                <!--<configuration>-->
+                    <!--<tabBase>svn://192.168.32.229:81/pitaya-projects/mass/tags</tabBase>-->
+                    <!--<branchBase>svn://192.168.32.229:81/pitaya-projects/mass/branches</branchBase>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        </plugins>
+    </build>
 
 
 </project>
