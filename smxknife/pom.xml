@@ -34,6 +34,7 @@
         <module>smxknife-asm</module>
         <module>smxknife-elasticjob</module>
         <module>smxknife-caffeine</module>
+        <module>smxknife-flink</module>
     </modules>
 
     <properties>
