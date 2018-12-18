@@ -11,7 +11,35 @@ import java.util.stream.Stream;
  */
 public class CompletableFutureDemo {
 	public static void main(String[] args) throws InterruptedException {
-//		ExecutorService service = Executors.newFixedThreadPool(1);
+		CompletableFutureDemo demo = new CompletableFutureDemo();
+//		demo.test1();
+//		demo.test2();
+		demo.test3();
+	}
+
+	public void test3() {
+		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+		CompletableFuture[] futures = Stream.iterate(1, n -> n + 1).limit(10).map(item -> {
+			CompletableFuture<Void> future = CompletableFuture.runAsync(new Runner(item), service);
+			return future;
+		}).toArray(CompletableFuture[]::new);
+		CompletableFuture.anyOf(futures).join();
+		service.shutdown();
+		System.out.println("finished~");
+	}
+
+	public void test2() {
+		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+		CompletableFuture[] futures = Stream.iterate(1, n -> n + 1).limit(10).map(item -> {
+			CompletableFuture<Void> future = CompletableFuture.runAsync(new Runner(item), service);
+			return future;
+		}).toArray(CompletableFuture[]::new);
+		service.shutdown();
+		System.out.println("finished~");
+	}
+
+	public void test1() {
+		//		ExecutorService service = Executors.newFixedThreadPool(1);
 		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();//
 		CompletableFuture[] futures = Stream.iterate(1, n -> n + 1).limit(10).map(item -> {
 			CompletableFuture<Void> future = CompletableFuture.runAsync(new Runner(item), service);
@@ -19,6 +47,7 @@ public class CompletableFutureDemo {
 		}).toArray(CompletableFuture[]::new);
 		CompletableFuture.allOf(futures).join();
 		service.shutdown();
+		System.out.println("finished~");
 	}
 }
 
