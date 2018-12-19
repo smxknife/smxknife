@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  */
 public class HandlerDemo {
 	public static void main(String[] args) {
-		Logger logger = Logger.getLogger("0");
+		Logger logger = Logger.getLogger("1");
 
 //		ConsoleHandler consoleHandler = new ConsoleHandler();
 //		consoleHandler.setLevel(Level.ALL);

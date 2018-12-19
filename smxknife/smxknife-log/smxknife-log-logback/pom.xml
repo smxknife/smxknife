@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.smxknife</groupId>
-    <artifactId>smxknife-log-java</artifactId>
+    <artifactId>smxknife-log-logback</artifactId>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-core -->

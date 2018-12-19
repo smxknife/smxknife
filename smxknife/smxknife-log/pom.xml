@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>smxknife-log-java</module>
+        <module>smxknife-log-logback</module>
     </modules>
 
 
