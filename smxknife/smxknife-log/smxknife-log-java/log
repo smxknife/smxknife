@@ -2,10 +2,10 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-09-12T14:31:46</date>
-  <millis>1536733906938</millis>
+  <date>2018-12-18T10:23:15</date>
+  <millis>1545099795697</millis>
   <sequence>2</sequence>
-  <logger>0</logger>
+  <logger>1</logger>
   <level>SEVERE</level>
   <class>com.smxknife.log.java.demo01.HandlerDemo</class>
   <method>main</method>
