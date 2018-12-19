@@ -8,7 +8,7 @@ public final class Print {
 
 	private Print() {}
 
-	public void println(Object ...contents) {
+	public static void println(Object ...contents) {
 		if (contents == null) return;
 		for (Object content : contents) {
 //			content.
