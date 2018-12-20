@@ -15,7 +15,9 @@
     <modules>
         <module>smxknife-log-java</module>
         <module>smxknife-log-logback</module>
-    </modules>
+		<module>smxknife-log-log4j</module>
+		<module>smxknife-log-log4j2</module>
+	</modules>
 
 
 </project>

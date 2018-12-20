@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="1" status="ERROR" strict="true" name="LogConfig">
+
+	<Properties>
+		<Property name="logbasedir">target/logs</Property>
+		<Property name="log.layout">%d %-5p %t (%c:%L) - %m%n</Property>
+		<property name="APP_NAME">app</property>
+	</Properties>
+
+	<!--<&#45;&#45;此处使用了两种类型的appender,RollingFile为滚动类型,满足策略条件后会新建文件夹记录 &ndash;&gt;-->
+	<Appenders>
+		<Appender type="Console" name="STDOUT">
+			<Target>SYSTEM_OUT</Target>
+			<Layout type="PatternLayout" pattern="${log.layout}"/>
+		</Appender>
+		<Appender type="RollingFile" name="FILE" fileName="${logbasedir}/jutap-${sys:APP_NAME}.log"
+				  filePattern = "${logbasedir}/jutap-${sys:APP_NAME}-%d{yyyy-MM-dd}.%i.log">
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="1000 MB"/>
+			</Policies>
+			<Layout type="PatternLayout">
+				<Charset>GBK</Charset>
+				<Pattern>${log.layout}</Pattern>
+			</Layout>
+		</Appender>
+		<!--<Appender type="RollingFile" name="ExceptionLog" fileName="${logbasedir}/exception-${sys:APP_NAME}.log"-->
+				  <!--filePattern = "${logbasedir}/exception-${sys:APP_NAME}-%d{yyyy-MM-dd}.%i.log">-->
+			<!--<Policies>-->
+				<!--<TimeBasedTriggeringPolicy />-->
+				<!--<SizeBasedTriggeringPolicy size="100 MB"/>-->
+			<!--</Policies>-->
+			<!--<Layout type="PatternLayout">-->
+				<!--<Charset>GBK</Charset>-->
+				<!--<Pattern>${log.layout}</Pattern>-->
+			<!--</Layout>-->
+		<!--</Appender>-->
+	</Appenders>
+
+	<Loggers>
+		<!--<Logger name="exception" level="error" additivity="false">-->
+			<!--<AppenderRef ref="ExceptionLog"/>-->
+		<!--</Logger>-->
+
+		<Root level="info">
+			<!--<AppenderRef ref="STDOUT"/>-->
+			<AppenderRef ref="FILE"/>
+		</Root>
+		<Logger name="om.smxknife.log.log4j2" level="error"/>
+	</Loggers>
+
+</Configuration>
