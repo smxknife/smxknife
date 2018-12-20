@@ -1,6 +1,6 @@
 package com.smxknife.netty.v5.fakeasyn;
 
-import com.smxknife.netty.common.TimeServerHandler;
+import com.smxknife.netty.v5.common.TimeServerHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
