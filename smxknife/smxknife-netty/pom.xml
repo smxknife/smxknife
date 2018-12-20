@@ -11,19 +11,24 @@
 
     <groupId>com.smxknife</groupId>
     <artifactId>smxknife-netty</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>smxknife-netty-v5</module>
+		<module>smxknife-netty-v4</module>
+	</modules>
 
-    <dependencies>
+	<dependencies>
         <!--<dependency>-->
             <!--<groupId>io.netty</groupId>-->
             <!--<artifactId>netty-all</artifactId>-->
             <!--<version>4.1.25.Final</version>-->
         <!--</dependency>-->
         <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>5.0.0.Alpha1</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.netty</groupId>-->
+            <!--<artifactId>netty-all</artifactId>-->
+            <!--<version>5.0.0.Alpha1</version>-->
+        <!--</dependency>-->
         <!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
