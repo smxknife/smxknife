@@ -2,7 +2,7 @@
 <configuration debug="false" scan="true" scanPeriod="30 second">
 
 	<property name="ROOT" value="target/logs/" />
-	<property name="FILE_SIZE" value="50MB" />
+	<property name="FILE_SIZE" value="500MB" />
 	<property name="MAX_HISTORY" value="100" />
 	<timestamp key="DATETIME" datePattern="yyyy-MM-dd HH:mm:ss" />
 	<!-- 控制台打印 -->
@@ -119,12 +119,12 @@
 	</logger>
 
 	<!-- Logger 根目录 -->
-	<root level="DEBUG">
-		<appender-ref ref="STDOUT" />
-		<appender-ref ref="DEBUG" />
+	<root level="ERROR">
+		<!--<appender-ref ref="STDOUT" />-->
+		<!--<appender-ref ref="DEBUG" />-->
 		<appender-ref ref="ERROR" />
-		<appender-ref ref="WARN" />
-		<appender-ref ref="INFO" />
-		<appender-ref ref="TRACE" />
+		<!--<appender-ref ref="WARN" />-->
+		<!--<appender-ref ref="INFO" />-->
+		<!--<appender-ref ref="TRACE" />-->
 	</root>
 </configuration>

@@ -1,0 +1,111 @@
+# JMH version: 1.21
+# VM version: JDK 1.8.0_131, Java HotSpot(TM) 64-Bit Server VM, 25.131-b11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=62113:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.smxknife.log.logback.demo02.PerformLogTest.test
+# Parameters: (loopNum = 100)
+
+# Run progress: 0.00% complete, ETA 00:05:00
+# Fork: 1 of 1
+objc[21818]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java (0x10038d4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x101bbc4e0). One of the two will be used. Which one is undefined.
+# Warmup Iteration   1: 1.104 ms/op
+# Warmup Iteration   2: 0.972 ms/op
+# Warmup Iteration   3: 0.981 ms/op
+# Warmup Iteration   4: 1.019 ms/op
+# Warmup Iteration   5: 0.933 ms/op
+Iteration   1: 1.132 ms/op
+Iteration   2: 0.890 ms/op
+Iteration   3: 0.873 ms/op
+Iteration   4: 1.012 ms/op
+Iteration   5: 1.049 ms/op
+
+
+Result "com.smxknife.log.logback.demo02.PerformLogTest.test":
+  0.991 ±(99.9%) 0.420 ms/op [Average]
+  (min, avg, max) = (0.873, 0.991, 1.132), stdev = 0.109
+  CI (99.9%): [0.571, 1.411] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_131, Java HotSpot(TM) 64-Bit Server VM, 25.131-b11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=62113:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.smxknife.log.logback.demo02.PerformLogTest.test
+# Parameters: (loopNum = 1000)
+
+# Run progress: 33.33% complete, ETA 00:03:23
+# Fork: 1 of 1
+objc[21837]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java (0x10b08a4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10b10e4e0). One of the two will be used. Which one is undefined.
+# Warmup Iteration   1: 12.527 ms/op
+# Warmup Iteration   2: 10.650 ms/op
+# Warmup Iteration   3: 10.037 ms/op
+# Warmup Iteration   4: 10.118 ms/op
+# Warmup Iteration   5: 9.029 ms/op
+Iteration   1: 8.901 ms/op
+Iteration   2: 9.498 ms/op
+Iteration   3: 9.088 ms/op
+Iteration   4: 10.463 ms/op
+Iteration   5: 10.326 ms/op
+
+
+Result "com.smxknife.log.logback.demo02.PerformLogTest.test":
+  9.655 ±(99.9%) 2.735 ms/op [Average]
+  (min, avg, max) = (8.901, 9.655, 10.463), stdev = 0.710
+  CI (99.9%): [6.920, 12.391] (assumes normal distribution)
+
+
+# JMH version: 1.21
+# VM version: JDK 1.8.0_131, Java HotSpot(TM) 64-Bit Server VM, 25.131-b11
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=62113:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.smxknife.log.logback.demo02.PerformLogTest.test
+# Parameters: (loopNum = 10000)
+
+# Run progress: 66.67% complete, ETA 00:01:41
+# Fork: 1 of 1
+objc[21849]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java (0x105c754c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x105cf94e0). One of the two will be used. Which one is undefined.
+# Warmup Iteration   1: 96.355 ms/op
+# Warmup Iteration   2: 121.362 ms/op
+# Warmup Iteration   3: 100.348 ms/op
+# Warmup Iteration   4: 89.101 ms/op
+# Warmup Iteration   5: 89.622 ms/op
+Iteration   1: 97.353 ms/op
+Iteration   2: 98.842 ms/op
+Iteration   3: 96.890 ms/op
+Iteration   4: 91.553 ms/op
+Iteration   5: 88.401 ms/op
+
+
+Result "com.smxknife.log.logback.demo02.PerformLogTest.test":
+  94.608 ±(99.9%) 17.062 ms/op [Average]
+  (min, avg, max) = (88.401, 94.608, 98.842), stdev = 4.431
+  CI (99.9%): [77.546, 111.669] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:05:05
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark            (loopNum)  Mode  Cnt   Score    Error  Units
+PerformLogTest.test        100  avgt    5   0.991 ±  0.420  ms/op
+PerformLogTest.test       1000  avgt    5   9.655 ±  2.735  ms/op
+PerformLogTest.test      10000  avgt    5  94.608 ± 17.062  ms/op
