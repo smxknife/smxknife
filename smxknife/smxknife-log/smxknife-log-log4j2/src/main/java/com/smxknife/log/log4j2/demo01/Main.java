@@ -1,4 +1,4 @@
-package com.smxknife.log.log4j2;
+package com.smxknife.log.log4j2.demo01;
 
 
 import org.apache.logging.log4j.LogManager;
