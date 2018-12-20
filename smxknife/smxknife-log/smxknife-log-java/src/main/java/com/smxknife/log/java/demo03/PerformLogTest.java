@@ -12,7 +12,7 @@ import java.util.logging.*;
  * @author smxknife
  * 2018-12-19
  */
-@BenchmarkMode(Mode.All)
+@BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
 public class PerformLogTest {
@@ -33,7 +33,7 @@ public class PerformLogTest {
 
 		try {
 			logger.setLevel(java.util.logging.Level.FINEST);
-			FileHandler fileHandler = new FileHandler("./perform.log");
+			FileHandler fileHandler = new FileHandler("./target/perform.log");
 			fileHandler.setLevel(Level.ALL);
 			fileHandler.setFormatter(new Formatter() {
 				@Override
