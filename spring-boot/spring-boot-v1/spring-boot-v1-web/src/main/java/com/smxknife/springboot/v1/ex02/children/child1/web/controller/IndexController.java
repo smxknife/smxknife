@@ -18,6 +18,16 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/index/test")
+    public String indexTest() {
+    	return "index";
+    }
+
+    @GetMapping("/index2")
+    public String index2() {
+    	return "index2";
+    }
+
     @PostMapping("/index")
     @ResponseBody
     public String post(@RequestBody String json) {
