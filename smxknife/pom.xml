@@ -35,7 +35,8 @@
         <module>smxknife-elasticjob</module>
         <module>smxknife-caffeine</module>
         <module>smxknife-flink</module>
-    </modules>
+		<module>smxknife-servlet</module>
+	</modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

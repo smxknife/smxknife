@@ -50,7 +50,7 @@ public class Main {
 		System.out.println(new String(tmp));
 
 		MyClassLoader myClassLoader = new MyClassLoader();
-		Class aClass = myClassLoader.defineClass("com.smxknife.asm.demo02.Comparable", bytes);
+		Class aClass = myClassLoader.defineClass("com.smxknife.asm.demo01.Comparable", bytes);
 		System.out.println(aClass);
 	}
 }
