@@ -3,12 +3,10 @@ package com.smxknife.servlet.tomcat.demo01.initializer;
 
 import com.smxknife.servlet.tomcat.demo01.servlet.HahaServlet;
 
-import javax.servlet.ServletContainerInitializer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import javax.servlet.*;
 import javax.servlet.annotation.HandlesTypes;
 import java.lang.reflect.Modifier;
+import java.util.Enumeration;
 import java.util.Set;
 
 /**
@@ -20,6 +18,17 @@ public class HahaServletContainerInitializer implements ServletContainerInitiali
 
 	@Override
 	public void onStartup(Set<Class<?>> set, ServletContext servletContext) throws ServletException {
+
+		System.out.println("----------------------");
+		System.out.println(servletContext.getContextPath());
+		System.out.println(servletContext.getServletContextName());
+		System.out.println(servletContext.getClass());
+		System.out.println(servletContext.getServerInfo());
+		Enumeration<String> servletNames = servletContext.getServletNames();
+		while (servletNames.hasMoreElements()) {
+			System.out.println(servletNames.nextElement());
+		}
+		System.out.println("======================");
 		System.out.println("servlet container nitializer onStarup");
 		System.out.println(set);
 		set.forEach(c -> {
@@ -30,6 +39,32 @@ public class HahaServletContainerInitializer implements ServletContainerInitiali
 				System.out.println("finish");
 				System.out.println(pattern);
 			}
+		});
+
+		servletContext.getServletRegistrations().forEach((k,v) -> {
+			String k1 = k;
+			ServletRegistration v1 = v;
+
+			System.out.println("===========" + k1);
+			System.out.println(v1.getRunAsRole());
+			System.out.println(v1.getName());
+			System.out.println(v1.getClassName());
+			v1.getMappings().forEach(m -> {
+				String m1 = m;
+				System.out.println(m1);
+			});
+		});
+
+		servletContext.getFilterRegistrations().forEach((k, v) -> {
+			String k1 = k;
+			FilterRegistration v1 = v;
+			System.out.println("-------------------");
+			System.out.println(k1);
+			System.out.println(v1.getClassName());
+			System.out.println(v1.getClass());
+			System.out.println(v1.getName());
+			v1.getServletNameMappings().forEach(m -> System.out.println("servlet : " + m));
+			v1.getUrlPatternMappings().forEach(url -> System.out.println("url : " + url));
 		});
 	}
 }

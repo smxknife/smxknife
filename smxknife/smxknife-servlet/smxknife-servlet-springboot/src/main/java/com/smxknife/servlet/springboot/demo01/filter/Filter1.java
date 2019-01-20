@@ -21,6 +21,7 @@ public class Filter1 implements Filter {
 		HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 		System.out.println("filter1===" + httpServletRequest.getRequestURI());
 		filterChain.doFilter(servletRequest, servletResponse);
+		System.out.println("filter1===after");
 	}
 
 	@Override

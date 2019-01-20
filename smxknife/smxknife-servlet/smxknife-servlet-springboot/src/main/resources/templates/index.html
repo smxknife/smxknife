@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+post test
+<input type="button" id="post" value="post">
+
+<br>
+文件上传：
+<form action="upload?test=hihi" enctype="multipart/form-data" method="post">
+    <input type="file" name="file" multiple>
+    <input type="text" name="test" value="test1">
+    <input type="text" name="test" value="test2">
+    <input type="submit" name="upload" value="upload">
+</form>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        $("#post").on('click', function () {
+            var param = {
+                "test": "hello",
+                "test": "world"
+            }
+            $.post('param?test=hi', param, function (data) {
+                console.log(data)
+            })
+        })
+    })
+</script>
+</body>
+</html>

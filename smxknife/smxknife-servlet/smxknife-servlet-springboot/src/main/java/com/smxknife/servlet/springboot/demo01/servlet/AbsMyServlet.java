@@ -13,13 +13,14 @@ import java.io.IOException;
 public abstract class AbsMyServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
-		System.out.println(this.getClass().getSimpleName() + " init...");
+		System.out.println(this.getClass().getSimpleName() + " init..." + " : instance: " + this);
 		super.init();
 		System.out.println("init parameter" + this.getInitParameter("msg"));
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("instance：" + this);
 		System.out.println("get method");
 		System.out.println("=================================");
 		System.out.println("schema " + req.getScheme());
@@ -43,6 +44,14 @@ public abstract class AbsMyServlet extends HttpServlet {
 		System.out.println("remotePort " + req.getRemotePort());
 		System.out.println("localPort " + req.getLocalPort());
 		System.out.println("localName " + req.getLocalName());
+		System.out.println("method " + req.getMethod());
+		System.out.println("dispatcherType " + req.getDispatcherType().name());
+		System.out.println("locale displayName " + req.getLocale().getDisplayName());
+		System.out.println("contentLengthLong " + req.getContentLengthLong());
+		System.out.println("userPrincipal.name " + req.getUserPrincipal().getName());
+		System.out.println("cookies " + req.getCookies());
+		System.out.println("requestUrl " + req.getRequestURL().toString());
+//		System.out.println(" " + );
 		System.out.println("=================================");
 		resp.getWriter().println(this.getClass().getSimpleName() + req.getRequestURI());
 	}
