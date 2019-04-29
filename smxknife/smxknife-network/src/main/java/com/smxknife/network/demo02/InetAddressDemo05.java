@@ -9,8 +9,7 @@ import java.net.UnknownHostException;
  */
 public class InetAddressDemo05 {
 	public static void main(String[] args) throws UnknownHostException {
-		InetAddress byName = InetAddress.getByName("185.199.110.153");
-		System.out.println("xxxx");
+		InetAddress byName = InetAddress.getLocalHost();
 		System.out.println(byName);
 		System.out.println(byName.getHostName());
 		System.out.println(byName.getHostAddress());

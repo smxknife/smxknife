@@ -30,8 +30,8 @@ public class DataPointAnnotatedClass {
 		name = annotation.name();
 
 		try {
-			qualifiedAnnotatedClassName = DataPoint.class.getCanonicalName();
-			simpleAnnotatedClassName = DataPoint.class.getSimpleName();
+			qualifiedAnnotatedClassName = annotatedClassElement.getQualifiedName().toString();
+			simpleAnnotatedClassName = annotatedClassElement.getSimpleName().toString();
 		} catch (MirroredTypeException mte) {
 			DeclaredType classTypeMirror = (DeclaredType) mte.getTypeMirror();
 			TypeElement classTypeElement = (TypeElement) classTypeMirror.asElement();

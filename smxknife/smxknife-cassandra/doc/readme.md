@@ -74,6 +74,10 @@ docker run --name node3 -v /Users/ShaoYun/toolbox/workstations/cassandra/node3:/
 docker run --name node4 -v /Users/ShaoYun/toolbox/workstations/cassandra/node4:/var/lib/cassandra --network cluster -d -e CASSANDRA_CLUSTER_NAME="cluster" -e CASSANDRA_SEEDS="172.18.0.2,172.18.0.3" cassandra
 ```
 
+```sybase
+docker run --name node1 -p 19042:9042 --network cluster -v /Users/ShaoYun/toolbox/workstations/cassandra/node1:/var/lib/cassandra -e HEAP_NEWSIZE=1M -e MAX_HEAP_SIZE=256M -d cassandra
+```
+
 ### 进入cassandra内部
 
 docker exec -it node1 bash

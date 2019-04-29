@@ -12,5 +12,24 @@
     <groupId>com.smxknife</groupId>
     <artifactId>smxknife-java</artifactId>
 
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.google.auto.service/auto-service -->
+		<dependency>
+			<groupId>com.google.auto.service</groupId>
+			<artifactId>auto-service</artifactId>
+			<version>1.0-rc5</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.0</version>
+			</plugin>
+		</plugins>
+	</build>
+
 
 </project>

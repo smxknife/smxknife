@@ -10,10 +10,7 @@ import static com.smxknife.network.demo04.URIUtil.output;
  */
 public class URIDemo2 {
 	public static void main(String[] args) {
-		URI uri = URI.create("/part1/part2");
-		output(uri);
-
-		uri = URI.create("aaa://shaoy@aaa/ppp/ccc/ddd?vvv=1&222=1#fff");
+		URI uri = URI.create("aaa://shaoy:pwd@aut:8080/ppp+-(())/ccc/ddd?vvv=1中&222=1#fff");
 		output(uri);
 	}
 }

@@ -1,29 +1,30 @@
 package com.smxknife.network.demo04;
 
-import java.net.URI;
+import java.io.IOException;
+import java.net.URL;
 
 /**
  * @author smxknife
  * 2019-02-14
  */
-public class URIUtil {
+public class URLUtil {
 	
-	public static void output(URI uri) {
+	public static void output(URL url) throws IOException {
 		System.out.println("-----------------------------");
-		System.out.println("-- uri: " + uri);
-		System.out.printf("-- scheme: %s\r\n", uri.getScheme());
-		System.out.printf("-- path: %s\r\n", uri.getPath());
-		System.out.printf("-- authority: %s\r\n", uri.getAuthority());
-		System.out.printf("-- fragment: %s\r\n", uri.getFragment());
-		System.out.printf("-- host: %s\r\n", uri.getHost());
-		System.out.printf("-- port: %s\r\n", uri.getPort());
-		System.out.printf("-- query: %s\r\n", uri.getQuery());
-		System.out.printf("-- rawAuthority: %s\r\n", uri.getRawAuthority());
-		System.out.printf("-- rawQuery: %s\r\n", uri.getRawQuery());
-		System.out.printf("-- RawFragment: %s\r\n", uri.getRawFragment());
-		System.out.printf("-- RawPath: %s\r\n", uri.getRawPath());
-		System.out.printf("-- RawSchemeSpecificPart: %s\r\n", uri.getRawSchemeSpecificPart());
-		System.out.printf("-- RawUserInfo: %s\r\n", uri.getRawUserInfo());
+		System.out.println("-- url: " + url);
+		System.out.printf("-- content: %s\r\n", url.getContent());
+		System.out.printf("-- path: %s\r\n", url.getPath());
+		System.out.printf("-- authority: %s\r\n", url.getAuthority());
+		System.out.printf("-- defaultPort: %s\r\n", url.getDefaultPort());
+		System.out.printf("-- host: %s\r\n", url.getHost());
+		System.out.printf("-- port: %s\r\n", url.getPort());
+		System.out.printf("-- query: %s\r\n", url.getQuery());
+		System.out.printf("-- file: %s\r\n", url.getFile());
+		System.out.printf("-- protocol: %s\r\n", url.getProtocol());
+		System.out.printf("-- ref: %s\r\n", url.getRef());
+		System.out.printf("-- userInfo: %s\r\n", url.getUserInfo());
+		System.out.printf("-- toString: %s\r\n", url.toString());
+		System.out.printf("-- toExternalFrom: %s\r\n", url.toExternalForm());
 		System.out.println("-----------------------------");
 	}
 }

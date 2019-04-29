@@ -36,6 +36,10 @@
         <module>smxknife-caffeine</module>
         <module>smxknife-flink</module>
 		<module>smxknife-servlet</module>
+		<module>smxknife-hibernate</module>
+		<module>smxknife-annotations</module>
+		<module>smxknife-patterns</module>
+		<module>smxknife-algorithm</module>
 	</modules>
 
     <properties>
@@ -77,6 +81,24 @@
 
     <build>
         <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+						<phase>test-compile</phase>
+						<configuration>
+							<annotationProcessors>com.smxknife.java2.abstractprocessor.DataPointProcessor</annotationProcessors>
+							<proc>only</proc>
+						</configuration>
+					</execution>
+				</executions>
+
+			</plugin>
             <!--<plugin>-->
                 <!--<groupId>org.apache.maven.plugins</groupId>-->
                 <!--<artifactId>maven-release-plugin</artifactId>-->

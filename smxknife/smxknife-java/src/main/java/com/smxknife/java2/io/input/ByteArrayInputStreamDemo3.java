@@ -8,34 +8,17 @@ import java.io.ByteArrayInputStream;
  */
 public class ByteArrayInputStreamDemo3 {
 	public static void main(String[] args) {
-		byte[] bytes = new byte[10];
-		ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
 
-		System.out.println(bis.available());
-		System.out.println(bis.markSupported());
-//		for (int i = 0; i < bis.available(); i++) {
-//			System.out.println(bis.read());
-//		}
+		String content = "hello_world";
 
-		int i = -1;
-//		while ((i = bis.read()) != -1) {
-//			System.out.println(i);
-//		}
+		ByteArrayInputStream bis = new ByteArrayInputStream(content.getBytes());
 
-		bis = new ByteArrayInputStream("abc_defg".getBytes());
-		System.out.println(bis.available());
-
-		System.out.println((char) bis.read());
-		System.out.println(bis.available());
-		bis.skip(3);
-		bis.mark(2);
-		System.out.println((char) bis.read());
-		System.out.println((char) bis.read());
-
-		System.out.println("---------------");
-		bis.reset();
-		System.out.println((char) bis.read());
-
-
+		byte[] bytes = new byte[content.length() + 5];
+		System.out.println(new String(bytes));
+		bis.read(bytes, 5, bis.available());
+		for (int i = 0; i < bytes.length; i++) {
+			System.out.print(" " + (char)bytes[i]);
+		}
+		System.out.println();
 	}
 }

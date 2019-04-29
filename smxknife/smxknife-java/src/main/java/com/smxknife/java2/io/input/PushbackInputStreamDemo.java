@@ -18,7 +18,7 @@ public class PushbackInputStreamDemo {
 		while ((read = pushbackInputStream.read()) != -1) {
 			if ('.' == (char) read) {
 				pushbackInputStream.unread(read);
-				 read = pushbackInputStream.read();
+				read = pushbackInputStream.read();
 				System.out.println("回退 " + (char) read);
 			} else
 				System.out.println((char) read);

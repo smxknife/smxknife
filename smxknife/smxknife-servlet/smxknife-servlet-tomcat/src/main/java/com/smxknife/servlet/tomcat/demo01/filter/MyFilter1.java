@@ -23,6 +23,7 @@ public class MyFilter1 implements Filter {
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 		System.out.println("myfilter1 doFilter");
+		//servletRequest.getParameterMap().put("key", new String[]{"aaaaa", "bbbbb"});
 		filterChain.doFilter(servletRequest, servletResponse);
 	}
 }

@@ -15,11 +15,13 @@ public class Service {
 
 	public void testMethod() {
 		try {
+			System.out.println(Thread.currentThread().getName() + "before acquire");
 			semaphore.acquire();
 			System.out.println(Thread.currentThread().getName() + " begin time : " + System.currentTimeMillis());
 			Thread.sleep(2000);
 			System.out.println(Thread.currentThread().getName() + " end time : " + System.currentTimeMillis());
 			semaphore.release();
+			System.out.println(Thread.currentThread().getName() + "after release");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

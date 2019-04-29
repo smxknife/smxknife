@@ -2,6 +2,7 @@ package com.smxknife.servlet.springboot.demo02;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * @author smxknife
@@ -10,6 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Demo02App {
 	public static void main(String[] args) {
-		SpringApplication.run(Demo02App.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(Demo02App.class, args);
 	}
 }

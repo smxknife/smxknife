@@ -17,7 +17,8 @@
     <modules>
         <module>spring-boot-v2</module>
         <module>spring-boot-v1</module>
-    </modules>
+		<module>spring-boot-v2-1</module>
+	</modules>
 
 
 </project>
