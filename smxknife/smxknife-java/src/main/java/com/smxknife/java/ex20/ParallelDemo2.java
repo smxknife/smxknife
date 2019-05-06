@@ -22,7 +22,7 @@ public class ParallelDemo2 {
 				return jj;
 			})).toArray(CompletableFuture[]::new);
 			CompletableFuture.allOf(futures).join();
-//			Arrays.asList(100, 200, 300, 400).stream().parallel().forEach(jj -> {
+//			Arrays.asList(100, 200, 300, 400).stream().other().forEach(jj -> {
 //				System.out.println("current i = " + ii + ", current value = " + jj + "Thread : " + Thread.currentThread().getName());
 //			});
 			return ii;
