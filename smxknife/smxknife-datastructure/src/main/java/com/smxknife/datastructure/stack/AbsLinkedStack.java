@@ -7,7 +7,7 @@ import java.util.Objects;
  * @author smxknife
  * 2019-05-09
  */
-public class AbsLinkedStack<T> extends AbsStack<T> {
+abstract class AbsLinkedStack<T> extends AbsStack<T> {
 
 	private Node<T> top;
 
