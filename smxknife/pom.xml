@@ -40,6 +40,7 @@
 		<module>smxknife-annotations</module>
 		<module>smxknife-patterns</module>
 		<module>smxknife-algorithm</module>
+		<module>smxknife-datastructure</module>
 	</modules>
 
     <properties>
