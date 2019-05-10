@@ -8,8 +8,10 @@ public class MaxInt {
 	public static void main(String[] args) {
 		// int max1 = 2_147_483_648; // 编译报错，too large
 		int max2 = 2_147_483_647;
-		int max3 = 2147483647;
+		int max3 = -2147483648;
 
 		long phone = 18357162303L;
+
+		System.out.println(Math.abs(max3));
 	}
 }
