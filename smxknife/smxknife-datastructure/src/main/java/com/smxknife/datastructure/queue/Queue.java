@@ -6,8 +6,8 @@ package com.smxknife.datastructure.queue;
  */
 public interface Queue<T> extends Iterable<T> {
 
-	void push(T t);
-	T pop();
+	void enqueue(T t);
+	T dequeue();
 	boolean isEmpty();
 	boolean isFull();
 	int size();

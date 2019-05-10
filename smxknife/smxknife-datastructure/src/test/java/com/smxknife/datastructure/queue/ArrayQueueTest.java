@@ -18,10 +18,10 @@ public class ArrayQueueTest {
 		System.out.println(queue.isFull());
 		System.out.println(queue.size());
 
-		queue.push("aaa");
-		queue.push("bbb");
-		queue.push("ccc");
-		queue.push("ddd");
+		queue.enqueue("aaa");
+		queue.enqueue("bbb");
+		queue.enqueue("ccc");
+		queue.enqueue("ddd");
 
 		System.out.println(queue.size());
 		System.out.println("-----------------");
@@ -31,15 +31,15 @@ public class ArrayQueueTest {
 		}
 
 		System.out.println("+++++++++++++++++");
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
 
 		for (int i = 0; i < 50; i++) {
-			queue.push("llll" + i);
+			queue.enqueue("llll" + i);
 		}
 
 		System.out.println("-----------------");

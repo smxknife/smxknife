@@ -18,13 +18,13 @@ public class LinkedQueueTest {
 		System.out.println(queue.isEmpty());
 
 		System.out.println("---------");
-		queue.push("aaa");
-		queue.push("bbb");
-		queue.push("ccc");
-		queue.push("aaa");
-		queue.push("ddd");
-		queue.push("eee");
-		queue.push("fff");
+		queue.enqueue("aaa");
+		queue.enqueue("bbb");
+		queue.enqueue("ccc");
+		queue.enqueue("aaa");
+		queue.enqueue("ddd");
+		queue.enqueue("eee");
+		queue.enqueue("fff");
 
 		System.out.println(queue.size());
 		System.out.println(queue.isEmpty());
@@ -37,14 +37,14 @@ public class LinkedQueueTest {
 		}
 
 		System.out.println("---------------");
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
-		System.out.println(queue.pop());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
+		System.out.println(queue.dequeue());
 
 
 	}

@@ -13,7 +13,7 @@ public class AbsLinkedQueue<T> extends AbsQueue<T> {
 	private Node<T> tail;
 
 	@Override
-	public void push(T t) {
+	public void enqueue(T t) {
 		if (Objects.isNull(head)) head = tail = new Node<>(t, null);
 		else {
 			tail = new Node<>(t, tail);
@@ -22,7 +22,7 @@ public class AbsLinkedQueue<T> extends AbsQueue<T> {
 	}
 
 	@Override
-	public T pop() {
+	public T dequeue() {
 		if (isEmpty()) return null;
 		T oldHead = head.item;
 		head = head.next;

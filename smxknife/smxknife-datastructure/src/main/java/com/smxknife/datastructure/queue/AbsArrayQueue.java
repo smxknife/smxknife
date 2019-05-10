@@ -20,7 +20,7 @@ abstract class AbsArrayQueue<T> extends AbsQueue<T> {
 	}
 
 	@Override
-	public void push(T t) {
+	public void enqueue(T t) {
 		expand(1);
 		this.elements[this.count++] = t;
 	}
@@ -48,7 +48,7 @@ abstract class AbsArrayQueue<T> extends AbsQueue<T> {
 	}
 
 	@Override
-	public T pop() {
+	public T dequeue() {
 		if (this.isEmpty()) return null;
 		T t = elements[0];
 		this.elements[0] = null;
