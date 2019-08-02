@@ -42,13 +42,14 @@ public abstract class AbsMyServlet extends HttpServlet {
 		System.out.println("remoteUser  " + req.getRemoteUser());
 		System.out.println("remoteHost " + req.getRemoteHost());
 		System.out.println("remotePort " + req.getRemotePort());
+		System.out.println("remoteAddr " + req.getRemoteAddr());
 		System.out.println("localPort " + req.getLocalPort());
 		System.out.println("localName " + req.getLocalName());
 		System.out.println("method " + req.getMethod());
 		System.out.println("dispatcherType " + req.getDispatcherType().name());
 		System.out.println("locale displayName " + req.getLocale().getDisplayName());
 		System.out.println("contentLengthLong " + req.getContentLengthLong());
-		System.out.println("userPrincipal.name " + req.getUserPrincipal().getName());
+//		System.out.println("userPrincipal.name " + req.getUserPrincipal().getName());
 		System.out.println("cookies " + req.getCookies());
 		System.out.println("requestUrl " + req.getRequestURL().toString());
 //		System.out.println(" " + );

@@ -24,7 +24,7 @@ public class SupperGeneric {
 //		extendsGroup.setObj(new Animal());
 //		extendsGroup.setObj(new Bosi());
 		extendsGroup.setObj(null);
-//		Animal obj = extendsGroup.getObj();
+		Animal obj1 = extendsGroup.getObj();
 		Cat cat = extendsGroup.getObj();
 //		Bosi bosi = extendsGroup.getObj();
 	}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+		PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+	<classPathEntry location="/Users/ShaoYun/local/workstation/repository/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar" />
+
+	<context id="default" targetRuntime="MyBatis3">
+
+		<!-- optional，旨在创建class时，对注释进行控制 -->
+		<commentGenerator>
+			<property name="suppressDate" value="true"/>
+			<property name="suppressAllComments" value="true"/>
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+						connectionURL="jdbc:mysql://localhost:3306/test"
+						userId="root"
+						password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver >
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.smxknife.mybatis.springboot.model" targetProject="src/main/java">
+			<!-- 是否允许子包，即targetPackage.schemaName.tableName -->
+			<property name="enableSubPackages" value="true" />
+			<!-- 是否对model添加 构造函数 -->
+			<property name="constructorBased" value="true"/>
+			<!-- 是否对类CHAR类型的列的数据进行trim操作 -->
+			<property name="trimStrings" value="false"/>
+			<!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 -->
+			<property name="immutable" value="false"/>
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.smxknife.mybatis.springboot.mapper"  targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.smxknife.mybatis.springboot.dao"  targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<table schema="test" tableName="tb_string" domainObjectName="TBString" >
+		</table>
+
+	</context>
+</generatorConfiguration>
