@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.stumbleupon.async.Deferred</OriginalElement>
+  <nodes>
+    <node x="372.0" y="0.0">com.stumbleupon.async.Deferred.Continue</node>
+    <node x="37.20000000000002" y="191.0">com.stumbleupon.async.Deferred</node>
+    <node x="0.0" y="11.5">com.stumbleupon.async.Deferred.Signal</node>
+    <node x="180.0" y="11.0">com.stumbleupon.async.Deferred.Chain</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.stumbleupon.async.Deferred" target="com.stumbleupon.async.Deferred.Continue">
+      <point x="102.5" y="-455.5" />
+      <point x="385.70000000000005" y="171.0" />
+      <point x="400.5" y="171.0" />
+      <point x="-85.5" y="70.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Signal" target="com.stumbleupon.async.Deferred">
+      <point x="53.33333333333334" y="59.0" />
+      <point x="133.33333333333334" y="171.0" />
+      <point x="139.70000000000002" y="171.0" />
+      <point x="-143.5" y="-455.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Continue" target="com.stumbleupon.async.Deferred">
+      <point x="-28.5" y="70.5" />
+      <point x="457.5" y="171.0" />
+      <point x="426.70000000000005" y="171.0" />
+      <point x="143.5" y="-455.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred" target="com.stumbleupon.async.Deferred.Signal">
+      <point x="-225.5" y="-455.5" />
+      <point x="57.70000000000002" y="171.0" />
+      <point x="26.666666666666657" y="171.0" />
+      <point x="-53.333333333333336" y="59.0" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred" target="com.stumbleupon.async.Deferred.Chain">
+      <point x="-102.5" y="-455.5" />
+      <point x="180.70000000000002" y="171.0" />
+      <point x="197.2" y="171.0" />
+      <point x="-68.80000000000001" y="59.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Chain" target="com.stumbleupon.async.Deferred">
+      <point x="34.400000000000034" y="59.5" />
+      <point x="300.40000000000003" y="171.0" />
+      <point x="303.70000000000005" y="171.0" />
+      <point x="20.5" y="-455.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="129.0" y="164.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

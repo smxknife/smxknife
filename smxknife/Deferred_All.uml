@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.stumbleupon.async.Deferred</OriginalElement>
+  <nodes>
+    <node x="192.0" y="175.6328125">com.stumbleupon.async.Deferred.Continue</node>
+    <node x="262.1833333333333" y="1.6328125">com.stumbleupon.async.Callback</node>
+    <node x="90.488888888889" y="406.6328125">com.stumbleupon.async.Deferred</node>
+    <node x="154.988888888889" y="1367.6328125">com.stumbleupon.async.DeferredGroup</node>
+    <node x="440.0" y="187.1328125">com.stumbleupon.async.Deferred.Signal</node>
+    <node x="0.0" y="186.6328125">com.stumbleupon.async.Deferred.Chain</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.stumbleupon.async.Deferred" target="com.stumbleupon.async.Deferred.Continue">
+      <point x="-65.60000000000008" y="-455.5" />
+      <point x="270.8888888888889" y="336.6328125" />
+      <point x="220.5" y="336.6328125" />
+      <point x="-85.5" y="70.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Chain" target="com.stumbleupon.async.Callback">
+      <point x="0.0" y="-59.5" />
+      <point x="86.0" y="125.6328125" />
+      <point x="338.1833333333333" y="125.6328125" />
+      <point x="-76.0" y="37.0" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Signal" target="com.stumbleupon.async.Deferred">
+      <point x="53.33333333333336" y="59.0" />
+      <point x="573.3333333333334" y="356.6328125" />
+      <point x="467.6888888888889" y="356.6328125" />
+      <point x="131.19999999999993" y="-455.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred" target="com.stumbleupon.async.DeferredGroup">
+      <point x="184.5" y="455.5" />
+      <point x="520.988888888889" y="1342.6328125" />
+      <point x="472.613888888889" y="1342.6328125" />
+      <point x="136.125" y="-115.0" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Continue" target="com.stumbleupon.async.Deferred">
+      <point x="85.5" y="70.5" />
+      <point x="391.5" y="386.6328125" />
+      <point x="369.28888888888895" y="386.6328125" />
+      <point x="32.799999999999955" y="-455.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred" target="com.stumbleupon.async.Deferred.Signal">
+      <point x="65.60000000000002" y="-455.5" />
+      <point x="402.088888888889" y="336.6328125" />
+      <point x="466.6666666666667" y="336.6328125" />
+      <point x="-53.33333333333334" y="59.0" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred" target="com.stumbleupon.async.Deferred.Chain">
+      <point x="-196.80000000000013" y="-455.5" />
+      <point x="139.68888888888887" y="376.6328125" />
+      <point x="51.60000000000002" y="376.6328125" />
+      <point x="-34.39999999999999" y="59.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.DeferredGroup" target="com.stumbleupon.async.DeferredGroup">
+      <point x="0.0" y="115.0" />
+      <point x="336.488888888889" y="1617.6328125" />
+      <point x="134.988888888889" y="1617.6328125" />
+      <point x="134.988888888889" y="1482.6328125" />
+      <point x="-181.5" y="-0.0" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Continue" target="com.stumbleupon.async.Callback">
+      <point x="0.0" y="-70.5" />
+      <point x="306.0" y="145.6328125" />
+      <point x="398.98333333333335" y="145.6328125" />
+      <point x="-15.199999999999989" y="37.0" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred" target="com.stumbleupon.async.Callback">
+      <point x="229.60000000000002" y="-455.5" />
+      <point x="566.088888888889" y="386.6328125" />
+      <point x="632.5" y="386.6328125" />
+      <point x="632.5" y="125.6328125" />
+      <point x="550.9833333333332" y="125.6328125" />
+      <point x="136.79999999999995" y="37.0" />
+    </edge>
+    <edge source="com.stumbleupon.async.DeferredGroup" target="com.stumbleupon.async.Deferred">
+      <point x="-136.125" y="-115.0" />
+      <point x="200.363888888889" y="1342.6328125" />
+      <point x="151.988888888889" y="1342.6328125" />
+      <point x="-184.5" y="455.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Callback" target="com.stumbleupon.async.Callback">
+      <point x="-106.39999999999998" y="37.0" />
+      <point x="307.7833333333333" y="105.6328125" />
+      <point x="232.1833333333333" y="105.6328125" />
+      <point x="232.1833333333333" y="20.1328125" />
+      <point x="-152.0" y="-18.5" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Signal" target="com.stumbleupon.async.Callback">
+      <point x="0.0" y="-59.0" />
+      <point x="520.0" y="155.6328125" />
+      <point x="459.7833333333333" y="155.6328125" />
+      <point x="45.60000000000002" y="37.0" />
+    </edge>
+    <edge source="com.stumbleupon.async.Deferred.Chain" target="com.stumbleupon.async.Deferred">
+      <point x="34.400000000000034" y="59.5" />
+      <point x="120.40000000000003" y="356.6328125" />
+      <point x="205.2888888888889" y="356.6328125" />
+      <point x="-131.2000000000001" y="-455.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5049383045107527" x="323.7285451819116" y="396.88261341939324" />
+  <SelectedNodes>
+    <node>com.stumbleupon.async.DeferredGroup</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

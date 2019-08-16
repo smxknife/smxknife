@@ -10,6 +10,7 @@ public class PrintTools {
 	public static Phaser phaser;
 
 	public static void methodA() {
+		phaser.arriveAndAwaitAdvance();
 		System.out.println(Thread.currentThread().getName() + " A1 begin=" + System.currentTimeMillis());
 	}
 }

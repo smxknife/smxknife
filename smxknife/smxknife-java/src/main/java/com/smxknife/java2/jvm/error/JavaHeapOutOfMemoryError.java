@@ -7,6 +7,9 @@ import java.util.List;
  * 模拟java堆OutOfMemoryError，前提是需要设置参数，防止虚拟机进行内存扩展 -Xmx128K -Xms128K
  * 通过命令来运行class文件
  * 1) cd target/classes
+ * java -cp . -Xmx1m -Xms1m -XX:+PrintGCTimeStamps com.smxknife.java2.jvm.error.JavaHeapOutOfMemoryError
+ * java -cp . -Xmx1m -Xms1m -XX:+PrintGCDetails com.smxknife.java2.jvm.error.JavaHeapOutOfMemoryError
+ * java -cp . -Xmx1M -Xms1M -XX:+HeapDumpOnOutOfMemoryError com.smxknife.java2.jvm.error.JavaHeapOutOfMemoryError
  * 2) java -cp . -Xmx1024K -Xms1024K com.smxknife.java2.jvm.error.JavaStackOutOfMemoryError
  * 通过指定-Xmx和-Xms来防止java进行内存扩展
  * 最后输出结果<p>Exception in thread "main" java.lang.OutOfMemoryError: Java heap space</p>

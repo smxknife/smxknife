@@ -43,6 +43,9 @@
 		<module>smxknife-datastructure</module>
 		<module>smxknife-okhttp</module>
 		<module>smxknife-mybatis</module>
+		<module>smxknife-deferred</module>
+		<module>smxknife-security</module>
+		<module>smxknife-websocket</module>
 	</modules>
 
     <properties>

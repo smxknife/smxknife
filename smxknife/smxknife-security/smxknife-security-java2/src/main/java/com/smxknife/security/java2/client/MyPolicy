@@ -1,0 +1,3 @@
+grant codeBase "file:/Users/ShaoYun/local/workstation/programs/smxknife/smxknife/smxknife-security/smxknife-security-java/target/classes/com/smxknife/security/java/core/PrivilegedFileUtil.class" {
+    permission java.io.FilePermission "/Users/ShaoYun/local/workstation/programs/smxknife/smxknife/smxknife-security/smxknife-security-java/src/main/resources/file/*", "read,write";
+};
