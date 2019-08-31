@@ -24,5 +24,7 @@ class MyService {
 		System.out.println(semaphore.availablePermits());
 		System.out.println(semaphore.drainPermits() + " - " + semaphore.availablePermits());
 		System.out.println(semaphore.availablePermits());
+		semaphore.release();
+		System.out.println(semaphore.availablePermits());
 	}
 }

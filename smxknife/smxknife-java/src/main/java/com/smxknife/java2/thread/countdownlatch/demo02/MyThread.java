@@ -20,6 +20,7 @@ public class MyThread extends Thread {
 			System.out.println(Thread.currentThread().getName() + " count : " + maxRunner.getCount());
 			Thread.sleep(2000);
 			maxRunner.countDown();
+			System.out.println(Thread.currentThread().getName() + " is prepared! current count : " + maxRunner.getCount());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

@@ -1,6 +1,5 @@
 package com.smxknife.java2.thread.futureAndCallable.exception;
 
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -15,12 +14,21 @@ public class _Run {
 
 		ExecutorService service = Executors.newFixedThreadPool(3);
 		Future<String> future = service.submit(callable);
+
 		try {
-			System.out.println(future.get());
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		} catch (ExecutionException e) {
-			e.printStackTrace();
+			future.get();
+		} catch (Exception e) {
+			System.out.println("Exception");
 		}
+
+//		try {
+//			System.out.println(future.get());
+//		} catch (InterruptedException e) {
+//			System.out.println("catch interrupted");
+//			e.printStackTrace();
+//		} catch (ExecutionException e) {
+//			System.out.println("catch execution");
+//			e.printStackTrace();
+//		}
 	}
 }

@@ -16,9 +16,9 @@ public class Main {
 			threads[idx].setName("runner-" + idx);
 			threads[idx].start();
 		});
-		System.out.println(maxRunner.getCount());
+//		System.out.println(maxRunner.getCount());
 		maxRunner.await();
-		System.out.println(maxRunner.getCount());
-		System.out.println("all back");
+//		System.out.println(maxRunner.getCount());
+		System.out.println("all back | count = " + maxRunner.getCount());
 	}
 }

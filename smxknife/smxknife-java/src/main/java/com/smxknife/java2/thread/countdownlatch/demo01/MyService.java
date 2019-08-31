@@ -23,7 +23,7 @@ public class MyService {
 
 	public void downM() {
 		System.out.println("x");
-		System.out.println("current count" + down.getCount());
+		System.out.println("current count " + down.getCount());
 		down.countDown();
 	}
 }

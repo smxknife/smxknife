@@ -9,7 +9,7 @@ import java.util.concurrent.CyclicBarrier;
 public class Main {
 	public static void main(String[] args) {
 		int parties = 4;
-		// int threadsNum = 4; // 线程数与parties一致，会继续等待
+//		 int threadsNum = 4; // 线程数与parties一致，会继续等待
 		int threadsNum = 5; // 只有异常停止，其他线程依然执行
 		CyclicBarrier barrier = new CyclicBarrier(parties, () -> {
 			System.out.println("都到了..");

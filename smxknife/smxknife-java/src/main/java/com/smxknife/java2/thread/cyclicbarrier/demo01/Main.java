@@ -11,8 +11,10 @@ public class Main {
 		CyclicBarrier cyclicBarrier = new CyclicBarrier(5, () -> {
 			System.out.println("全部到位");
 		});
-		MyThread[] threads = new MyThread[5];
-		for (int i = 0; i < 5; i++) {
+
+		int num = 5;
+		MyThread[] threads = new MyThread[num];
+		for (int i = 0; i < num; i++) {
 			threads[i] = new MyThread(cyclicBarrier);
 			threads[i].setName("runner-" + i);
 			threads[i].start();

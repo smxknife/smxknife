@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.util.concurrent.Executors.PrivilegedThreadFactory</OriginalElement>
+  <nodes>
+    <node x="1807.8836666666648" y="575.0">java.util.concurrent.CompletableFuture.OrRun</node>
+    <node x="1294.8836666666648" y="468.0">java.util.concurrent.CompletableFuture.UniApply</node>
+    <node x="4908.279666666667" y="468.0">java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy</node>
+    <node x="503.0" y="361.0">java.util.concurrent.CompletableFuture.Signaller</node>
+    <node x="2157.883666666665" y="575.0">java.util.concurrent.CompletableFuture.OrAccept</node>
+    <node x="3526.383666666665" y="361.0">java.util.concurrent.Executors.DelegatedExecutorService</node>
+    <node x="789.6336666666648" y="187.0">java.util.concurrent.CompletableFuture.AsynchronousCompletionTask</node>
+    <node x="3923.279666666667" y="575.0">java.util.concurrent.ScheduledThreadPoolExecutor.ScheduledFutureTask</node>
+    <node x="4470.279666666667" y="468.0">java.util.concurrent.ThreadPoolExecutor.AbortPolicy</node>
+    <node x="32.0" y="724.0">java.util.concurrent.CompletionService</node>
+    <node x="0.0" y="575.0">java.util.concurrent.CompletableFuture.BiAccept</node>
+    <node x="3271.6013333333335" y="468.0">java.util.concurrent.Executors.FinalizableDelegatedExecutorService</node>
+    <node x="3316.383666666665" y="361.0">java.util.concurrent.Executors.PrivilegedCallable</node>
+    <node x="2484.883666666665" y="264.0">java.util.concurrent.ThreadFactory</node>
+    <node x="3129.383666666665" y="361.0">java.util.concurrent.Executors.RunnableAdapter</node>
+    <node x="1692.8836666666648" y="468.0">java.util.concurrent.CompletableFuture.UniCompose</node>
+    <node x="232.0" y="468.0">java.util.concurrent.CompletableFuture.UniAccept</node>
+    <node x="4794.279666666667" y="468.0">java.util.concurrent.ThreadPoolExecutor.Worker</node>
+    <node x="370.0" y="468.0">java.util.concurrent.CompletableFuture.UniRun</node>
+    <node x="1554.8836666666648" y="468.0">java.util.concurrent.CompletableFuture.UniHandle</node>
+    <node x="792.8836666666648" y="264.0">java.util.concurrent.CompletableFuture.AsyncRun</node>
+    <node x="3994.279666666667" y="468.0">java.util.concurrent.ScheduledThreadPoolExecutor</node>
+    <node x="1232.1336666666648" y="361.0">java.util.concurrent.CompletableFuture.UniCompletion</node>
+    <node x="3200.133666666665" y="264.0">java.util.concurrent.Executors</node>
+    <node x="638.8836666666648" y="264.0">java.util.concurrent.CompletableFuture.AsyncSupply</node>
+    <node x="961.8836666666649" y="264.0">java.util.concurrent.CompletableFuture.Completion</node>
+    <node x="0.0" y="801.0">java.util.concurrent.ExecutorCompletionService</node>
+    <node x="4451.800333333332" y="264.0">java.util.concurrent.AbstractExecutorService</node>
+    <node x="404.0" y="187.0">java.util.concurrent.CompletableFuture.AltResult</node>
+    <node x="1108.8836666666648" y="468.0">java.util.concurrent.CompletableFuture.UniWhenComplete</node>
+    <node x="4193.279666666667" y="652.0">java.util.concurrent.ScheduledThreadPoolExecutor.DelayedWorkQueue.Itr</node>
+    <node x="4529.300333333332" y="361.0">java.util.concurrent.ThreadPoolExecutor</node>
+    <node x="44.0" y="878.0">java.util.concurrent.ExecutorCompletionService.QueueingFuture</node>
+    <node x="3136.029666666667" y="187.0">java.util.concurrent.CompletableFuture.ThreadPerTaskExecutor</node>
+    <node x="1148.8836666666648" y="0.0">java.util.concurrent.CompletableFuture</node>
+    <node x="1072.8836666666648" y="575.0">java.util.concurrent.CompletableFuture.BiRelay</node>
+    <node x="2734.383666666665" y="361.0">java.util.concurrent.Executors.PrivilegedCallableUsingCurrentClassLoader</node>
+    <node x="4141.279666666667" y="575.0">java.util.concurrent.ScheduledThreadPoolExecutor.DelayedWorkQueue</node>
+    <node x="715.75" y="361.0">java.util.concurrent.CompletableFuture.CoCompletion</node>
+    <node x="38.0" y="468.0">java.util.concurrent.CompletableFuture.UniExceptionally</node>
+    <node x="1954.8836666666648" y="468.0">java.util.concurrent.CompletableFuture.BiCompletion</node>
+    <node x="4276.279666666667" y="468.0">java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy</node>
+    <node x="4624.279666666667" y="468.0">java.util.concurrent.ThreadPoolExecutor.DiscardPolicy</node>
+    <node x="3982.8003333333318" y="187.0">java.util.concurrent.ExecutorService</node>
+    <node x="3664.279666666667" y="468.0">java.util.concurrent.Executors.DelegatedScheduledExecutorService</node>
+    <node x="2287.883666666665" y="575.0">java.util.concurrent.CompletableFuture.OrRelay</node>
+    <node x="3319.779666666667" y="0.0">java.util.concurrent.Executor</node>
+    <node x="2508.383666666665" y="361.0">java.util.concurrent.Executors.DefaultThreadFactory</node>
+    <node x="2035.8836666666648" y="575.0">java.util.concurrent.CompletableFuture.OrApply</node>
+    <node x="1913.8836666666648" y="575.0">java.util.concurrent.CompletableFuture.BiApply</node>
+    <node x="2409.883666666665" y="575.0">java.util.concurrent.CompletableFuture.BiRun</node>
+    <node x="2734.8333333333335" y="468.0">java.util.concurrent.Executors.PrivilegedThreadFactory</node>
+    <node x="1424.8836666666648" y="468.0">java.util.concurrent.CompletableFuture.UniRelay</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.concurrent.CompletableFuture.OrAccept" target="java.util.concurrent.CompletableFuture.BiCompletion">
+      <point x="-27.5" y="-13.5" />
+      <point x="2185.383666666665" y="545.0" />
+      <point x="2052.508666666665" y="545.0" />
+      <point x="26.625" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.DefaultThreadFactory" target="java.util.concurrent.Executors">
+      <point x="51.5" y="-13.5" />
+      <point x="2662.883666666665" y="311.0" />
+      <point x="3207.508666666665" y="311.0" />
+      <point x="-51.625" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.AbstractExecutorService" target="java.util.concurrent.ExecutorService">
+      <point x="0.0" y="-13.5" />
+      <point x="4566.800333333332" y="244.0" />
+      <point x="4121.133666666665" y="244.0" />
+      <point x="55.333333333333485" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiAccept" target="java.util.concurrent.CompletableFuture.BiCompletion">
+      <point x="27.5" y="-13.5" />
+      <point x="82.5" y="525.0" />
+      <point x="1963.7586666666648" y="525.0" />
+      <point x="-62.125" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.AsyncRun" target="java.util.concurrent.CompletableFuture">
+      <point x="-27.5" y="-13.5" />
+      <point x="820.3836666666648" y="234.0" />
+      <point x="779.1336666666648" y="234.0" />
+      <point x="779.1336666666648" y="127.0" />
+      <point x="1208.3836666666648" y="127.0" />
+      <point x="-31.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.Executors.DelegatedExecutorService">
+      <point x="-103.33333333333348" y="-13.5" />
+      <point x="3715.9463333333333" y="448.0" />
+      <point x="3704.883666666665" y="448.0" />
+      <point x="59.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniApply" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="-27.5" y="-13.5" />
+      <point x="1322.3836666666648" y="448.0" />
+      <point x="1307.1336666666648" y="448.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ScheduledThreadPoolExecutor.DelayedWorkQueue.Itr" target="java.util.concurrent.ScheduledThreadPoolExecutor.DelayedWorkQueue">
+      <point x="0.0" y="-13.5" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ExecutorCompletionService" target="java.util.concurrent.CompletionService">
+      <point x="0.0" y="-13.5" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniRun" target="java.util.concurrent.CompletableFuture">
+      <point x="-23.5" y="-13.5" />
+      <point x="393.5" y="77.0" />
+      <point x="1173.3836666666648" y="77.0" />
+      <point x="-66.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ExecutorService">
+      <point x="-65.5" y="-13.5" />
+      <point x="4059.779666666667" y="244.0" />
+      <point x="4065.8003333333318" y="244.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.DelegatedExecutorService" target="java.util.concurrent.Executors">
+      <point x="-59.5" y="-13.5" />
+      <point x="3585.883666666665" y="321.0" />
+      <point x="3296.008666666665" y="321.0" />
+      <point x="36.875" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.AsyncSupply" target="java.util.concurrent.CompletableFuture.AsynchronousCompletionTask">
+      <point x="33.5" y="-13.5" />
+      <point x="739.3836666666648" y="244.0" />
+      <point x="831.9669999999983" y="244.0" />
+      <point x="-84.66666666666663" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiCompletion" target="java.util.concurrent.CompletableFuture">
+      <point x="35.5" y="-13.5" />
+      <point x="2061.383666666665" y="97.0" />
+      <point x="1292.3836666666648" y="97.0" />
+      <point x="52.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiAccept" target="java.util.concurrent.CompletableFuture">
+      <point x="-27.5" y="-13.5" />
+      <point x="27.5" y="47.0" />
+      <point x="1152.3836666666648" y="47.0" />
+      <point x="-87.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.PrivilegedCallableUsingCurrentClassLoader" target="java.util.concurrent.Executors">
+      <point x="0.0" y="-13.5" />
+      <point x="2921.383666666665" y="321.0" />
+      <point x="3222.258666666665" y="321.0" />
+      <point x="-36.875" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniExceptionally" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="43.5" y="-13.5" />
+      <point x="168.5" y="418.0" />
+      <point x="1240.4669999999983" y="418.0" />
+      <point x="-66.66666666666674" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniRelay" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="-27.5" y="-13.5" />
+      <point x="1452.3836666666648" y="438.0" />
+      <point x="1323.8003333333318" y="438.0" />
+      <point x="16.666666666666742" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ScheduledThreadPoolExecutor.DelayedWorkQueue" target="java.util.concurrent.ScheduledThreadPoolExecutor">
+      <point x="0.0" y="-13.5" />
+      <point x="4228.279666666667" y="555.0" />
+      <point x="4190.779666666667" y="555.0" />
+      <point x="65.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniCompletion" target="java.util.concurrent.CompletableFuture">
+      <point x="37.5" y="-13.5" />
+      <point x="1344.6336666666648" y="167.0" />
+      <point x="1243.3836666666648" y="167.0" />
+      <point x="3.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.Executors">
+      <point x="0.0" y="-13.5" />
+      <point x="3819.279666666667" y="448.0" />
+      <point x="3822.1013333333335" y="448.0" />
+      <point x="3822.1013333333335" y="311.0" />
+      <point x="3310.758666666665" y="311.0" />
+      <point x="51.625" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy" target="java.util.concurrent.ThreadPoolExecutor">
+      <point x="0.0" y="-13.5" />
+      <point x="4363.279666666667" y="438.0" />
+      <point x="4576.800333333332" y="438.0" />
+      <point x="-47.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.ThreadPerTaskExecutor" target="java.util.concurrent.CompletableFuture">
+      <point x="-53.5" y="-13.5" />
+      <point x="3189.529666666667" y="47.0" />
+      <point x="1327.3836666666648" y="47.0" />
+      <point x="87.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.PrivilegedCallable" target="java.util.concurrent.Executors">
+      <point x="0.0" y="-13.5" />
+      <point x="3411.383666666665" y="331.0" />
+      <point x="3281.258666666665" y="331.0" />
+      <point x="22.125" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniCompletion" target="java.util.concurrent.CompletableFuture.Completion">
+      <point x="-37.5" y="-13.5" />
+      <point x="1269.6336666666648" y="341.0" />
+      <point x="1066.8836666666648" y="341.0" />
+      <point x="42.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ThreadPoolExecutor">
+      <point x="65.5" y="-13.5" />
+      <point x="4190.779666666667" y="428.0" />
+      <point x="4545.133666666665" y="428.0" />
+      <point x="-79.16666666666697" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniAccept" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="29.5" y="-13.5" />
+      <point x="320.5" y="428.0" />
+      <point x="1257.1336666666648" y="428.0" />
+      <point x="-50.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiRelay" target="java.util.concurrent.CompletableFuture.BiCompletion">
+      <point x="25.5" y="-13.5" />
+      <point x="1149.3836666666648" y="535.0" />
+      <point x="1981.5086666666648" y="535.0" />
+      <point x="-44.375" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.DefaultThreadFactory" target="java.util.concurrent.ThreadFactory">
+      <point x="-51.5" y="-13.5" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.AltResult" target="java.util.concurrent.CompletableFuture">
+      <point x="0.0" y="-13.5" />
+      <point x="463.0" y="87.0" />
+      <point x="1180.3836666666648" y="87.0" />
+      <point x="-59.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.RunnableAdapter" target="java.util.concurrent.Executors">
+      <point x="0.0" y="-13.5" />
+      <point x="3212.383666666665" y="341.0" />
+      <point x="3251.758666666665" y="341.0" />
+      <point x="-7.375" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.OrApply" target="java.util.concurrent.CompletableFuture.BiCompletion">
+      <point x="-25.5" y="-13.5" />
+      <point x="2061.383666666665" y="555.0" />
+      <point x="2034.7586666666648" y="555.0" />
+      <point x="8.875" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.ExecutorService">
+      <point x="103.33333333333348" y="-13.5" />
+      <point x="3922.6130000000003" y="448.0" />
+      <point x="3876.4463333333333" y="448.0" />
+      <point x="3876.4463333333333" y="244.0" />
+      <point x="4010.4669999999983" y="244.0" />
+      <point x="-55.333333333333485" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.CoCompletion" target="java.util.concurrent.CompletableFuture.Completion">
+      <point x="35.5" y="-13.5" />
+      <point x="822.25" y="341.0" />
+      <point x="1024.8836666666648" y="341.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.OrRun" target="java.util.concurrent.CompletableFuture">
+      <point x="-21.5" y="-13.5" />
+      <point x="1829.3836666666648" y="117.0" />
+      <point x="1278.3836666666648" y="117.0" />
+      <point x="38.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniHandle" target="java.util.concurrent.CompletableFuture">
+      <point x="29.5" y="-13.5" />
+      <point x="1643.3836666666648" y="137.0" />
+      <point x="1264.3836666666648" y="137.0" />
+      <point x="24.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.AsyncRun" target="java.util.concurrent.CompletableFuture.AsynchronousCompletionTask">
+      <point x="27.5" y="-13.5" />
+      <point x="875.3836666666648" y="244.0" />
+      <point x="916.6336666666648" y="244.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.OrRelay" target="java.util.concurrent.CompletableFuture.BiCompletion">
+      <point x="-25.5" y="-13.5" />
+      <point x="2313.383666666665" y="535.0" />
+      <point x="2070.258666666665" y="535.0" />
+      <point x="44.375" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniRelay" target="java.util.concurrent.CompletableFuture">
+      <point x="27.5" y="-13.5" />
+      <point x="1507.3836666666648" y="147.0" />
+      <point x="1257.3836666666648" y="147.0" />
+      <point x="17.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.Signaller" target="java.util.concurrent.CompletableFuture">
+      <point x="-29.5" y="-13.5" />
+      <point x="532.5" y="97.0" />
+      <point x="1187.3836666666648" y="97.0" />
+      <point x="-52.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiCompletion" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="-35.5" y="-13.5" />
+      <point x="1990.3836666666648" y="408.0" />
+      <point x="1373.8003333333318" y="408.0" />
+      <point x="66.66666666666674" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.Signaller" target="java.util.concurrent.CompletableFuture.Completion">
+      <point x="29.5" y="-13.5" />
+      <point x="591.5" y="331.0" />
+      <point x="982.8836666666649" y="331.0" />
+      <point x="-42.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiApply" target="java.util.concurrent.CompletableFuture">
+      <point x="-25.5" y="-13.5" />
+      <point x="1939.3836666666648" y="515.0" />
+      <point x="1928.5711666666648" y="515.0" />
+      <point x="1928.5711666666648" y="107.0" />
+      <point x="1285.3836666666648" y="107.0" />
+      <point x="45.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiRun" target="java.util.concurrent.CompletableFuture.BiCompletion">
+      <point x="-21.5" y="-13.5" />
+      <point x="2431.383666666665" y="525.0" />
+      <point x="2088.008666666665" y="525.0" />
+      <point x="62.125" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniWhenComplete" target="java.util.concurrent.CompletableFuture">
+      <point x="-41.5" y="-13.5" />
+      <point x="1150.3836666666648" y="167.0" />
+      <point x="1236.3836666666648" y="167.0" />
+      <point x="-3.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ExecutorService" target="java.util.concurrent.Executor">
+      <point x="0.0" y="-13.5" />
+      <point x="4065.8003333333318" y="167.0" />
+      <point x="3402.279666666667" y="167.0" />
+      <point x="27.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.FinalizableDelegatedExecutorService" target="java.util.concurrent.Executors.DelegatedExecutorService">
+      <point x="81.5" y="-13.5" />
+      <point x="3516.1013333333335" y="448.0" />
+      <point x="3585.883666666665" y="448.0" />
+      <point x="-59.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.PrivilegedThreadFactory" target="java.util.concurrent.Executors">
+      <point x="57.5" y="-13.5" />
+      <point x="2907.3333333333335" y="448.0" />
+      <point x="3118.883666666665" y="448.0" />
+      <point x="3118.883666666665" y="331.0" />
+      <point x="3237.008666666665" y="331.0" />
+      <point x="-22.125" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor.Worker" target="java.util.concurrent.ThreadPoolExecutor">
+      <point x="0.0" y="-13.5" />
+      <point x="4841.279666666667" y="438.0" />
+      <point x="4671.800333333332" y="438.0" />
+      <point x="47.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniExceptionally" target="java.util.concurrent.CompletableFuture">
+      <point x="-43.5" y="-13.5" />
+      <point x="81.5" y="57.0" />
+      <point x="1159.3836666666648" y="57.0" />
+      <point x="-80.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.AsynchronousCompletionTask" target="java.util.concurrent.CompletableFuture">
+      <point x="0.0" y="-13.5" />
+      <point x="916.6336666666648" y="137.0" />
+      <point x="1215.3836666666648" y="137.0" />
+      <point x="-24.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ScheduledThreadPoolExecutor.ScheduledFutureTask" target="java.util.concurrent.ScheduledThreadPoolExecutor">
+      <point x="-4.547473508864641E-13" y="-13.5" />
+      <point x="4022.2796666666663" y="555.0" />
+      <point x="4059.779666666667" y="555.0" />
+      <point x="-65.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.CoCompletion" target="java.util.concurrent.CompletableFuture">
+      <point x="-35.5" y="-13.5" />
+      <point x="751.25" y="321.0" />
+      <point x="628.3836666666648" y="321.0" />
+      <point x="628.3836666666648" y="107.0" />
+      <point x="1194.3836666666648" y="107.0" />
+      <point x="-45.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiApply" target="java.util.concurrent.CompletableFuture.BiCompletion">
+      <point x="25.5" y="-13.5" />
+      <point x="1990.3836666666648" y="555.0" />
+      <point x="2017.0086666666648" y="555.0" />
+      <point x="-8.875" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.FinalizableDelegatedExecutorService" target="java.util.concurrent.Executors">
+      <point x="-81.5" y="-13.5" />
+      <point x="3353.1013333333335" y="448.0" />
+      <point x="3305.883666666665" y="448.0" />
+      <point x="3305.883666666665" y="341.0" />
+      <point x="3266.508666666665" y="341.0" />
+      <point x="7.375" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.Completion" target="java.util.concurrent.CompletableFuture.AsynchronousCompletionTask">
+      <point x="-31.500000000000114" y="-13.5" />
+      <point x="993.3836666666648" y="244.0" />
+      <point x="1001.3003333333315" y="244.0" />
+      <point x="84.66666666666674" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.OrRelay" target="java.util.concurrent.CompletableFuture">
+      <point x="25.5" y="-13.5" />
+      <point x="2364.383666666665" y="67.0" />
+      <point x="1313.3836666666648" y="67.0" />
+      <point x="73.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniCompose" target="java.util.concurrent.CompletableFuture">
+      <point x="31.5" y="-13.5" />
+      <point x="1787.3836666666648" y="127.0" />
+      <point x="1271.3836666666648" y="127.0" />
+      <point x="31.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor" target="java.util.concurrent.AbstractExecutorService">
+      <point x="0.0" y="-13.5" />
+      <point x="57.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.OrAccept" target="java.util.concurrent.CompletableFuture">
+      <point x="27.5" y="-13.5" />
+      <point x="2240.383666666665" y="77.0" />
+      <point x="1306.3836666666648" y="77.0" />
+      <point x="66.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniRun" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="23.5" y="-13.5" />
+      <point x="440.5" y="438.0" />
+      <point x="1273.8003333333318" y="438.0" />
+      <point x="-33.33333333333326" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiRun" target="java.util.concurrent.CompletableFuture">
+      <point x="21.5" y="-13.5" />
+      <point x="2474.383666666665" y="57.0" />
+      <point x="1320.3836666666648" y="57.0" />
+      <point x="80.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniHandle" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="-29.5" y="-13.5" />
+      <point x="1584.3836666666648" y="428.0" />
+      <point x="1340.4669999999983" y="428.0" />
+      <point x="33.33333333333326" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor.DiscardPolicy" target="java.util.concurrent.ThreadPoolExecutor">
+      <point x="0.0" y="-13.5" />
+      <point x="4699.279666666667" y="448.0" />
+      <point x="4640.133666666665" y="448.0" />
+      <point x="15.83333333333303" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy" target="java.util.concurrent.ThreadPoolExecutor">
+      <point x="0.0" y="-13.5" />
+      <point x="5007.279666666667" y="428.0" />
+      <point x="4703.466999999999" y="428.0" />
+      <point x="79.16666666666697" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniAccept" target="java.util.concurrent.CompletableFuture">
+      <point x="-29.5" y="-13.5" />
+      <point x="261.5" y="67.0" />
+      <point x="1166.3836666666648" y="67.0" />
+      <point x="-73.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniWhenComplete" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="41.5" y="-13.5" />
+      <point x="1233.3836666666648" y="448.0" />
+      <point x="1290.4669999999983" y="448.0" />
+      <point x="-16.666666666666742" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.AsyncSupply" target="java.util.concurrent.CompletableFuture">
+      <point x="-33.5" y="-13.5" />
+      <point x="672.3836666666648" y="117.0" />
+      <point x="1201.3836666666648" y="117.0" />
+      <point x="-38.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.ThreadPerTaskExecutor" target="java.util.concurrent.Executor">
+      <point x="53.5" y="-13.5" />
+      <point x="3296.529666666667" y="167.0" />
+      <point x="3347.279666666667" y="167.0" />
+      <point x="-27.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.BiRelay" target="java.util.concurrent.CompletableFuture">
+      <point x="-25.5" y="-13.5" />
+      <point x="1098.3836666666648" y="157.0" />
+      <point x="1229.3836666666648" y="157.0" />
+      <point x="-10.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor.AbortPolicy" target="java.util.concurrent.ThreadPoolExecutor">
+      <point x="0.0" y="-13.5" />
+      <point x="4537.279666666667" y="448.0" />
+      <point x="4608.466999999999" y="448.0" />
+      <point x="-15.83333333333303" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.OrApply" target="java.util.concurrent.CompletableFuture">
+      <point x="25.5" y="-13.5" />
+      <point x="2112.383666666665" y="555.0" />
+      <point x="2123.196166666665" y="555.0" />
+      <point x="2123.196166666665" y="87.0" />
+      <point x="1299.3836666666648" y="87.0" />
+      <point x="59.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.DelegatedExecutorService" target="java.util.concurrent.AbstractExecutorService">
+      <point x="59.5" y="-13.5" />
+      <point x="3704.883666666665" y="341.0" />
+      <point x="4509.300333333332" y="341.0" />
+      <point x="-57.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniApply" target="java.util.concurrent.CompletableFuture">
+      <point x="27.5" y="-13.5" />
+      <point x="1377.3836666666648" y="448.0" />
+      <point x="1392.6336666666648" y="448.0" />
+      <point x="1392.6336666666648" y="157.0" />
+      <point x="1250.3836666666648" y="157.0" />
+      <point x="10.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.OrRun" target="java.util.concurrent.CompletableFuture.BiCompletion">
+      <point x="21.5" y="-13.5" />
+      <point x="1872.3836666666648" y="545.0" />
+      <point x="1999.2586666666648" y="545.0" />
+      <point x="-26.625" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.Completion" target="java.util.concurrent.CompletableFuture">
+      <point x="31.499999999999886" y="-13.5" />
+      <point x="1056.3836666666648" y="147.0" />
+      <point x="1222.3836666666648" y="147.0" />
+      <point x="-17.5" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.Executors.PrivilegedThreadFactory" target="java.util.concurrent.Executors.DefaultThreadFactory">
+      <point x="-57.5" y="-13.5" />
+      <point x="2792.3333333333335" y="448.0" />
+      <point x="2611.383666666665" y="448.0" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.ExecutorCompletionService.QueueingFuture" target="java.util.concurrent.ExecutorCompletionService">
+      <point x="0.0" y="-13.5" />
+      <point x="0.0" y="13.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture.UniCompose" target="java.util.concurrent.CompletableFuture.UniCompletion">
+      <point x="-31.5" y="-13.5" />
+      <point x="1724.3836666666648" y="418.0" />
+      <point x="1357.1336666666648" y="418.0" />
+      <point x="50.0" y="13.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6183160933631322" x="619.6404755515978" y="446.70115235541016" />
+  <SelectedNodes>
+    <node>java.util.concurrent.ExecutorCompletionService</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
