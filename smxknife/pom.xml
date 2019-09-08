@@ -46,6 +46,8 @@
 		<module>smxknife-deferred</module>
 		<module>smxknife-security</module>
 		<module>smxknife-websocket</module>
+		<module>smxknife-leakcanary</module>
+		<module>smxknife-xnio</module>
 	</modules>
 
     <properties>

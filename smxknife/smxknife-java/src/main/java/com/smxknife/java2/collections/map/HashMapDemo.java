@@ -46,8 +46,30 @@ public class HashMapDemo {
 		//      onlyIfAbsent: 如果为true，表示不改变已经存在的值
 		//      evict: 如果为false表示table处于创建模式
 		// 所以在默认调用的时候，put(hash("k1"), "k1", "v1", false, true)
+
+		// hash(key)是一个关键方法
+		/**
+		 * static final int hash(Object key) {
+		 *         int h;
+		 *         return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+		 *     }
+		 */
+		// 关键一点就是 hash ^ (hash >>> 16)， ^(hash >>> 16)可以称为扰动函数，假如在没有扰动函数的情况下
+		// hashCode简化为hash = key.hashCode()，在get(key)的时候，采用的是是如下的方式
+		/**
+		 * tab[(table.length - 1) & hash]
+		 */
+		// 上面已经说过table.length采用的是2的幂次长度，那么减一之后，
+		// 采用二进制表示，就会变成0000...1111，高位全是0，低位全是1的情况
+		// hash 与 0000...1111这种形式做与运算，相当于去掉将高位全变为0，这样就很容易出现hash碰撞
+		// 对于一些高位不同，低位相同的key，最后的hash却是相同的，这就很不合理，所以，这里采用扰动函数进行干预
+		// ^(hash >>> 16) ，hash >>> 16 相当于把int的32位高16位右移到低16位上，这样再原来的低16位可以与原来的高16位
+		// 做异或运算，这样相当于高位和低位同时参与低位hash编码，在与table.length做取模运算的时候，减少了hash碰撞的概率
+
 		// 执行过程如下：
 		//      1) 判断table是否为null或length=0
 		//          1.1) 如果 真，调用resize()方法，对table进行扩容，如果为null进行分配
+
+		String k1 = map.get("k1");
 	}
 }

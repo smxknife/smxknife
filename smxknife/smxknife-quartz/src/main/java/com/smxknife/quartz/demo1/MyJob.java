@@ -6,7 +6,7 @@ public class MyJob implements Job {
 
 	public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
 //		System.out.println(jobExecutionContext);
-		System.out.println("Hello, MyJob is executing");
+		System.out.println(Thread.currentThread().getName() + " - Hello, MyJob is executing ------ ");
 
 		JobDetail jobDetail = jobExecutionContext.getJobDetail();
 		JobKey key = jobDetail.getKey();

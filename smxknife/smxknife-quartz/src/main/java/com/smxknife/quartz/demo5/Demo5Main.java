@@ -16,19 +16,19 @@ public class Demo5Main {
 
 		CronTrigger trigger = TriggerBuilder.newTrigger()
 				.withIdentity("trigger", "group")
-				.withSchedule(CronScheduleBuilder.cronSchedule("/7 * * 22W * ?"))
+				.withSchedule(CronScheduleBuilder.cronSchedule("/7 * * * * ?"))
 				.forJob(jobDetail)
 				.build();
 
 		CronTrigger trigger2 = TriggerBuilder.newTrigger()
 				.withIdentity("trigger2", "group")
-				.withSchedule(CronScheduleBuilder.cronSchedule("*/7 * * 21W * ?"))
+				.withSchedule(CronScheduleBuilder.cronSchedule("*/7 * * * * ?"))
 				.forJob(jobDetail)
 				.build();
 
 		CronTrigger trigger3 = TriggerBuilder.newTrigger()
 				.withIdentity("trigger3", "group")
-				.withSchedule(CronScheduleBuilder.cronSchedule("0/7 * * 23W * ?"))
+				.withSchedule(CronScheduleBuilder.cronSchedule("0/7 * * * * ?"))
 				.forJob(jobDetail)
 				.build();
 
