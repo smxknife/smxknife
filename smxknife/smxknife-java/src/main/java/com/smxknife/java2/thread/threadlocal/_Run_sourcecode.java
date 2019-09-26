@@ -106,6 +106,17 @@ public class _Run_sourcecode {
 		local.set("hh");
 		// set方法就比较简单，与setInitialValue基本相似
 
+		// TODO ThreadLocalMap的另一个弊端
+		// TODO ThreadLocalMap的key是弱引用，但是呢Value是强引用，这样ThreadLocal在没有外部对象强引用时，发生GC时，弱引用key
+		// TODO 被回收了，而value没有回收，如果创建ThreadLocal的线程一直持续运行，那么这个Entry对象中的value可能一直得不到回收
+		// TODO 发生内存泄露，如何避免呢？
+
+		local.remove();
+		// TODO remove方法就是解决方案，remove之后，将Entry节点和Map的引用关系移除，这样整个GC Roots与Entry变成不可达，下次GC会被删除
+		// TODO 如果使用set方法没有显示调用remove方法，就有可能发生内存泄露，所以在使用完ThreadLocal之后要记得调用remove方法
+
+
+
 
 	}
 }

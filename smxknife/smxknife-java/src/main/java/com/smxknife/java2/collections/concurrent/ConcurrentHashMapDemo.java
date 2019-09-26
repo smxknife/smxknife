@@ -1,4 +1,4 @@
-package com.smxknife.java2.collections.map;
+package com.smxknife.java2.collections.concurrent;
 
 /**
  * @author smxknife

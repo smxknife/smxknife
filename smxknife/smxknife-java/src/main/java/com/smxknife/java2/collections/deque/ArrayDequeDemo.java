@@ -62,6 +62,7 @@ public class ArrayDequeDemo {
 		//      这个操作理解起来还是比较晦涩的，一定要有一个前提，element.length 是2的幂次，（这很重要）
 		//      element.length - 1，就会变成二进制全为1的数，那么与之进行与运算相当于求余
 		// 像上面的判断，如果tail + 1 == head了，就进行双倍扩容
+
 		// region 模拟(tail = (tail + 1) & (elements.length - 1)，可以忽略
 		int head = 0, size = 8;
 		for (int i = 0; i < size; i++) {
