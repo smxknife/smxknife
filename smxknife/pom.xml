@@ -48,6 +48,7 @@
 		<module>smxknife-websocket</module>
 		<module>smxknife-leakcanary</module>
 		<module>smxknife-xnio</module>
+		<module>smxknife-axis</module>
 	</modules>
 
     <properties>

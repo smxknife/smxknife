@@ -1,0 +1,130 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from IGaugeService WSDL service -->
+
+  <service name="IGaugePort" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.travelsky.com/"/>
+      <parameter name="wsdlServiceElement" value="IGaugeService"/>
+      <parameter name="schemaUnqualified" value="http://ws.travelsky.com/"/>
+      <parameter name="wsdlServicePort" value="IGaugePort"/>
+      <parameter name="className" value="com.travelsky.ws.IGaugeServiceSoapBindingSkeleton"/>
+      <parameter name="wsdlPortType" value="IGauge"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:meta"
+        type="java:com.travelsky.ws.Meta"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:iads"
+        type="java:com.travelsky.ws.Iads"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:iservice"
+        type="java:com.travelsky.ws.Iservice"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:iwat"
+        type="java:com.travelsky.ws.Iwat"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:responseMsg"
+        type="java:com.travelsky.ws.ResponseMsg"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:istay"
+        type="java:com.travelsky.ws.Istay"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:subArea"
+        type="java:com.travelsky.ws.SubArea"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:semsRS"
+        type="java:com.travelsky.ws.SemsRS"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:area"
+        type="java:com.travelsky.ws.Area"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:sems"
+        type="java:com.travelsky.ws.Sems"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:semsRQ"
+        type="java:com.travelsky.ws.SemsRQ"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:semsCondition"
+        type="java:com.travelsky.ws.SemsCondition"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://ws.travelsky.com/"
+        qname="ns:iinout"
+        type="java:com.travelsky.ws.Iinout"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

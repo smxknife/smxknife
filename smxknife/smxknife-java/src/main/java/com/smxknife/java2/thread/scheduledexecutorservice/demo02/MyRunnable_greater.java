@@ -1,5 +1,6 @@
 package com.smxknife.java2.thread.scheduledexecutorservice.demo02;
 
+import java.time.LocalTime;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -9,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class MyRunnable_greater implements Runnable {
 	@Override
 	public void run() {
-		System.out.println(Thread.currentThread().getName() + " begin " + System.currentTimeMillis());
+		System.out.println(Thread.currentThread().getName() + " begin " + LocalTime.now());
 
 		try {
 			TimeUnit.SECONDS.sleep(4);
@@ -17,6 +18,6 @@ public class MyRunnable_greater implements Runnable {
 			e.printStackTrace();
 		}
 
-		System.out.println(Thread.currentThread().getName() + " end " + System.currentTimeMillis());
+		System.out.println(Thread.currentThread().getName() + " end " + LocalTime.now());
 	}
 }

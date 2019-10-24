@@ -1,0 +1,26 @@
+<deployment
+        xmlns="http://xml.apache.org/axis/wsdd/"
+        xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+    <!-- Services from CSPRequestService WSDL service -->
+
+    <service name="UserService" provider="java:RPC" style="rpc" use="encoded">
+        <parameter name="wsdlTargetNamespace" value="http://localhost:12345/server/axis/services/UserService"/>
+        <parameter name="wsdlServiceElement" value="RequestService"/>
+        <parameter name="schemaUnqualified" value="_UserService"/>
+        <parameter name="wsdlServicePort" value="UserService"/>
+        <parameter name="className" value="org.smxknife.axis.server.services.impl.UserServiceImpl"/>
+        <parameter name="typeMappingVersion" value="1.2"/>
+        <parameter name="allowedMethods" value="userInfo userList"/>
+    </service>
+
+    <service name="PasswordService" provider="java:RPC" style="rpc" use="encoded">
+        <parameter name="wsdlTargetNamespace" value="http://localhost:12345/server/axis/services/PasswordService"/>
+        <parameter name="wsdlServiceElement" value="RequestService"/>
+        <parameter name="schemaUnqualified" value="PasswordService"/>
+        <parameter name="wsdlServicePort" value="UserService"/>
+        <parameter name="className" value="org.smxknife.axis.server.services.impl.PasswordServiceImpl"/>
+        <parameter name="typeMappingVersion" value="1.2"/>
+        <parameter name="allowedMethods" value="*"/>
+    </service>
+</deployment>

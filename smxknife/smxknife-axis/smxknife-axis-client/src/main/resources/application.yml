@@ -1,0 +1,4 @@
+server:
+  port: 12346
+  servlet:
+    context-path: /client
