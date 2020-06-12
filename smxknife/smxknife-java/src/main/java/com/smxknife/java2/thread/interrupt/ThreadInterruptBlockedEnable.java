@@ -16,7 +16,12 @@ public class ThreadInterruptBlockedEnable implements Runnable {
 			} catch (InterruptedException e) {
 				System.out.println("在阻塞处接收到中断请求");
 				e.printStackTrace();
-				break; // 通过主动break，让线程终止
+				// 方式一：
+				//break; // 通过主动break，让线程终止
+				// 方式二：
+				Thread.currentThread().interrupt();
+				// 再次调用Interrupt，为什么会出现这种情况，因为阻塞方法在收到Interrupt之后会解除阻塞，然后再次调用Interrupt会将状态消除
+				// 所以这里再次调用就可以正确的获取状态
 			}
 		}
 	}

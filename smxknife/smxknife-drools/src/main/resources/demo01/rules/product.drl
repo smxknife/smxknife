@@ -1,0 +1,25 @@
+package com.smxknife.drools.hh;
+
+import com.smxknife.drools.demo01.Product;
+
+rule "Product price less than 500" // 就是给规则取个名
+
+when
+    pp : Product(prePrice <= 500) // 规则
+then
+    // 符合规则后执行的操作
+    double prePrice = pp.getPrePrice();
+    pp.setRealPrice(prePrice * 0.85);
+    System.out.println(pp.getName() + " | 活动价格500是：" + pp.getRealPrice());
+end
+
+rule "Product price less than 1000" // 就是给规则取个名
+
+when
+    pp2 : Product(prePrice > 500 && prePrice <= 1000) // 规则
+then
+    // 符合规则后执行的操作
+    double prePrice = pp2.getPrePrice();
+    pp2.setRealPrice(prePrice * 0.8);
+    System.out.println(pp2.getName() + " | 活动价格1000是：" + pp2.getRealPrice());
+end

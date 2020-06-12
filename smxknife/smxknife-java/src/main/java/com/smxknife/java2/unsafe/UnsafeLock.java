@@ -52,7 +52,7 @@ public class UnsafeLock {
 	}
 
 	private boolean compareAndSetStatus(int expectVal, int newVal) {
-		long offset = UNSAFE.getIntVolatile(this, statusOffset);
+		//long offset = UNSAFE.getIntVolatile(this, statusOffset);
 		return UNSAFE.compareAndSwapInt(this, statusOffset, expectVal, newVal);
 	}
 

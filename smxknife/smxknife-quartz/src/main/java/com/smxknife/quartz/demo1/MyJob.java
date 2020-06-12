@@ -8,6 +8,12 @@ public class MyJob implements Job {
 //		System.out.println(jobExecutionContext);
 		System.out.println(Thread.currentThread().getName() + " - Hello, MyJob is executing ------ ");
 
+//		String num = "0";
+//		for (int i = 0; i < 1000_0000; i++) {
+//			int val = Integer.valueOf(num) + 1;
+//			num = String.valueOf(val);
+//		}
+
 		JobDetail jobDetail = jobExecutionContext.getJobDetail();
 		JobKey key = jobDetail.getKey();
 		System.out.printf("myjob key is %s\r\n", key);

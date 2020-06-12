@@ -25,11 +25,12 @@ public class _Run_arrived_unarrived {
 		});
 
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("已到达：" + phaser.getArrivedParties());
-		System.out.println("未到达：" + phaser.getUnarrivedParties());
+		System.out.println("1. 已到达：" + phaser.getArrivedParties());
+		System.out.println("2. 未到达：" + phaser.getUnarrivedParties());
 
 		phaser.arrive();
-		System.out.println("已到达：" + phaser.getArrivedParties());
-		System.out.println("未到达：" + phaser.getUnarrivedParties());
+//		phaser.arrive();
+		System.out.println("3. 已到达：" + phaser.getArrivedParties());
+		System.out.println("4. 未到达：" + phaser.getUnarrivedParties());
 	}
 }

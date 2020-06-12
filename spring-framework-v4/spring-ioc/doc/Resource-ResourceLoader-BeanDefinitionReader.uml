@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.smxknife.spring.ioc.IoCBoot</OriginalElement>
+  <nodes>
+    <node x="326.0" y="0.0">org.springframework.core.io.ResourceLoader</node>
+    <node x="0.0" y="400.0">org.springframework.context.support.FileSystemXmlApplicationContext</node>
+    <node x="707.4" y="160.0">org.springframework.core.io.ClassRelativeResourceLoader</node>
+    <node x="264.46153846153845" y="715.0">org.springframework.core.io.DefaultResourceLoader.ClassPathContextResource</node>
+    <node x="0.0" y="950.0">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</node>
+    <node x="351.99999999999994" y="635.0">org.springframework.core.io.UrlResource</node>
+    <node x="159.39999999999998" y="320.0">org.springframework.context.support.AbstractXmlApplicationContext</node>
+    <node x="664.0" y="635.0">org.springframework.core.io.ClassPathResource</node>
+    <node x="897.0" y="635.0">org.springframework.core.io.FileSystemResource</node>
+    <node x="807.0" y="715.0">org.springframework.core.io.FileSystemResourceLoader.FileSystemContextResource</node>
+    <node x="447.4" y="160.0">org.springframework.core.io.FileSystemResourceLoader</node>
+    <node x="139.39999999999998" y="80.0">org.springframework.context.ApplicationContext</node>
+    <node x="187.99999999999994" y="635.0">org.springframework.core.io.PathResource</node>
+    <node x="120.0" y="870.0">org.springframework.beans.factory.support.AbstractBeanDefinitionReader</node>
+    <node x="487.99999999999994" y="555.0">org.springframework.core.io.AbstractResource</node>
+    <node x="252.0" y="950.0">org.springframework.beans.factory.support.PropertiesBeanDefinitionReader</node>
+    <node x="0.0" y="635.0">org.springframework.core.io.ContextResource</node>
+    <node x="171.39999999999998" y="160.0">org.springframework.context.support.AbstractApplicationContext</node>
+    <node x="464.0" y="80.0">org.springframework.core.io.DefaultResourceLoader</node>
+    <node x="152.0" y="790.0">org.springframework.beans.factory.support.BeanDefinitionReader</node>
+    <node x="316.0" y="400.0">org.springframework.context.support.ClassPathXmlApplicationContext</node>
+    <node x="507.99999999999994" y="635.0">org.springframework.core.io.VfsResource</node>
+    <node x="127.39999999999998" y="240.0">org.springframework.context.support.AbstractRefreshableApplicationContext</node>
+    <node x="343.99999999999994" y="475.0">org.springframework.core.io.Resource</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.core.io.ClassPathResource" target="org.springframework.core.io.AbstractResource">
+      <point x="0.0" y="-15.0" />
+      <point x="756.0" y="615.0" />
+      <point x="611.2" y="615.0" />
+      <point x="35.200000000000045" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.AbstractResource" target="org.springframework.core.io.Resource">
+      <point x="0.0" y="-15.0" />
+      <point x="576.0" y="535.0" />
+      <point x="413.99999999999994" y="535.0" />
+      <point x="14.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.FileSystemResourceLoader.FileSystemContextResource" target="org.springframework.core.io.FileSystemResource">
+      <point x="62.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.support.AbstractXmlApplicationContext" target="org.springframework.context.support.AbstractRefreshableApplicationContext">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.FileSystemResource" target="org.springframework.core.io.AbstractResource">
+      <point x="-48.0" y="-15.0" />
+      <point x="945.0" y="605.0" />
+      <point x="646.3999999999999" y="605.0" />
+      <point x="70.39999999999998" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.DefaultResourceLoader" target="org.springframework.core.io.ResourceLoader">
+      <point x="0.0" y="-15.0" />
+      <point x="572.0" y="55.0" />
+      <point x="446.0" y="55.0" />
+      <point x="40.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.PathResource" target="org.springframework.core.io.Resource">
+      <point x="-36.0" y="-15.0" />
+      <point x="223.99999999999994" y="535.0" />
+      <point x="385.99999999999994" y="535.0" />
+      <point x="-14.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.FileSystemResourceLoader.FileSystemContextResource" target="org.springframework.core.io.ContextResource">
+      <point x="-62.0" y="-15.0" />
+      <point x="869.0" y="685.0" />
+      <point x="126.0" y="685.0" />
+      <point x="42.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.UrlResource" target="org.springframework.core.io.AbstractResource">
+      <point x="0.0" y="-15.0" />
+      <point x="419.99999999999994" y="615.0" />
+      <point x="540.8" y="615.0" />
+      <point x="-35.200000000000045" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.ApplicationContext" target="org.springframework.core.io.ResourceLoader">
+      <point x="0.0" y="-15.0" />
+      <point x="235.39999999999998" y="55.0" />
+      <point x="366.0" y="55.0" />
+      <point x="-40.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.support.AbstractApplicationContext" target="org.springframework.context.ApplicationContext">
+      <point x="-64.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.ClassRelativeResourceLoader" target="org.springframework.core.io.DefaultResourceLoader">
+      <point x="0.0" y="-15.0" />
+      <point x="839.4" y="135.0" />
+      <point x="644.0" y="135.0" />
+      <point x="72.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" target="org.springframework.beans.factory.support.BeanDefinitionReader">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.FileSystemResourceLoader" target="org.springframework.core.io.DefaultResourceLoader">
+      <point x="0.0" y="-15.0" />
+      <point x="567.4" y="135.0" />
+      <point x="572.0" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.support.ClassPathXmlApplicationContext" target="org.springframework.context.support.AbstractXmlApplicationContext">
+      <point x="0.0" y="-15.0" />
+      <point x="460.0" y="375.0" />
+      <point x="369.4" y="375.0" />
+      <point x="70.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.DefaultResourceLoader.ClassPathContextResource" target="org.springframework.core.io.ClassPathResource">
+      <point x="60.0" y="-15.0" />
+      <point x="444.46153846153845" y="695.0" />
+      <point x="756.0" y="695.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.PathResource" target="org.springframework.core.io.AbstractResource">
+      <point x="36.0" y="-15.0" />
+      <point x="295.99999999999994" y="605.0" />
+      <point x="505.59999999999997" y="605.0" />
+      <point x="-70.39999999999998" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.support.AbstractApplicationContext" target="org.springframework.core.io.DefaultResourceLoader">
+      <point x="64.0" y="-15.0" />
+      <point x="363.4" y="135.0" />
+      <point x="500.0" y="135.0" />
+      <point x="-72.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.beans.factory.support.AbstractBeanDefinitionReader">
+      <point x="0.0" y="-15.0" />
+      <point x="116.0" y="925.0" />
+      <point x="188.0" y="925.0" />
+      <point x="-68.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.support.AbstractRefreshableApplicationContext" target="org.springframework.context.support.AbstractApplicationContext">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.ContextResource" target="org.springframework.core.io.Resource">
+      <point x="0.0" y="-15.0" />
+      <point x="83.99999999999994" y="525.0" />
+      <point x="357.99999999999994" y="525.0" />
+      <point x="-42.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.PropertiesBeanDefinitionReader" target="org.springframework.beans.factory.support.AbstractBeanDefinitionReader">
+      <point x="0.0" y="-15.0" />
+      <point x="396.0" y="925.0" />
+      <point x="324.0" y="925.0" />
+      <point x="68.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.FileSystemResource" target="org.springframework.core.io.Resource">
+      <point x="48.00000000000006" y="-15.0" />
+      <point x="1041.0" y="525.0" />
+      <point x="441.99999999999994" y="525.0" />
+      <point x="42.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.DefaultResourceLoader.ClassPathContextResource" target="org.springframework.core.io.ContextResource">
+      <point x="-60.0" y="-15.0" />
+      <point x="324.46153846153845" y="695.0" />
+      <point x="42.0" y="695.0" />
+      <point x="-42.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.support.FileSystemXmlApplicationContext" target="org.springframework.context.support.AbstractXmlApplicationContext">
+      <point x="0.0" y="-15.0" />
+      <point x="148.0" y="375.0" />
+      <point x="229.39999999999998" y="375.0" />
+      <point x="-70.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.VfsResource" target="org.springframework.core.io.AbstractResource">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.73" x="544.5" y="490.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

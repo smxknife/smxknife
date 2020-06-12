@@ -3,6 +3,8 @@ package com.smxknife.quartz.demo1;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class Demo1Main {
 	public static void main(String[] args) throws SchedulerException {
 
@@ -32,13 +34,13 @@ public class Demo1Main {
 		scheduler.start();
 
 		try {
-			Thread.sleep(20 * 1000L);
+			TimeUnit.MINUTES.sleep(1);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
 		System.out.println("meta2: " + scheduler.getMetaData());
-		scheduler.shutdown();
+		scheduler.shutdown(true);
 
 	}
 }

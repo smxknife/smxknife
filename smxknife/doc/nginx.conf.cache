@@ -1,0 +1,154 @@
+
+user  root root;
+worker_processes  8;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+pid        nginx.pid;
+
+worker_rlimits_nofile 65535;
+
+
+events {
+    worker_connections  65535;
+    multi_accept on;
+    use epoll;
+}
+
+## 对应横向扩展，横向扩展使用了多块硬盘，nginx在读取硬盘文件时会阻塞worker进程，nginx提供提供读取文件线程池的功能
+# thread_pool只能在main模块
+# 线程池数量要和硬盘数量一一对应，如果新增硬盘，就要新增线程池
+# thread_pool后面跟的值一次代表线程池的名字，线程数，最大等待队列
+# thread_pool pool_1 threads=32 max_queue=65536;
+# thread_pool pool_2 threads=32 max_queue=65536;
+# thread_pool pool_3 threads=32 max_queue=65536;
+# thread_pool pool_4 threads=32 max_queue=65536;
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  logs/access.log  main;
+
+    sendfile       on;
+    tcp_nopush     on;
+    tcp_nodelay    on;
+
+    keepalive_requests 1000;
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+    
+    client_max_body_size 300m;
+    client_body_buffer_size 512k;
+    reset_timeout_connection on;
+
+    gzip  on;
+    gzip_min_length 1k;
+    gzip_buffers 16 8k;
+    gzip_comp_level 7;
+    gzip_types text/plain text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript application/json application/javascript;
+    gzip_vary on;
+    
+    proxy_connect_timeout 5;
+    proxy_send_timeout 30;
+    proxy_read_timeout 60;
+    proxy_buffering on;
+    proxy_next_upstream error http_500 http_502 http_504 timeout;
+    proxy_next_upstream_tries 2;
+    proxy_next_upstream_timeout 0;
+    
+    upstream test_servers {
+        server localhost:11800 max_fails=5 fail_timeout=10s weight=10;
+        server localhost:11801 max_fails=5 fail_timeout=10s weight=5;
+        server localhost:11802 backup; # 当所有后端服务都不可用时，upstream对backup进行分流
+        server localhost:11803 down; # 服务不可用
+    }
+    
+    ## 横向扩展，nginx的key是放在内存中1M空间大约可以存储8000个key；value是存储在硬盘上，所以会受到硬盘空间和硬盘IO的影响
+    # proxy_cache_path /data1/nginxcache levels=1:2 keys_zone=data_1:100m inactive=7d max_size=50g use_temp_path=off;
+    # proxy_cache_path /data2/nginxcache levels=1:2 keys_zone=data_2:100m inactive=7d max_size=50g use_temp_path=off;
+    # proxy_cache_path /data3/nginxcache levels=1:2 keys_zone=data_3:100m inactive=7d max_size=50g use_temp_path=off;
+    # proxy_cache_path /data4/nginxcache levels=1:2 keys_zone=data_4:100m inactive=7d max_size=50g use_temp_path=off;
+    # 根据URL进行hash分片，将请求的百分比根据hash分片设置相应的值，并将此值分给$disk
+    # split_clients $request_uri $disk {
+    #    20% 1;
+    #    10% 2;
+    #    30% 3;
+    #    *   4;
+    # }
+    
+    ## 单机方式
+    # 设置缓存空间的名字及其存放路径和存放方式
+    proxy_cache_path /data1/nginxcache levels=1:2 keys_zone=cachedata:100m inactive=7d max_size=50g use_temp_path=off;
+
+    server {
+        listen       10801;
+        #access_log  logs/host.access.log  main;
+
+		location / {
+		
+		    ## 指定缓存空间大小
+		    # 单机模式
+		    proxy_cache cachedata;
+		    # 横向扩展
+		    # proxy_cache data_$disk;
+		    # 横向扩展使用线程池
+		    # aio threads=pool_$disk;
+		    
+		    # 指定缓存的HTTP状态及缓存时间
+		    proxy_cache_valid 200 304 10s;
+		    proxy_cache_valid 301 302 100s;
+		    
+		    # 请求最少被访问两次才会被缓存
+		    proxy_cache_min_uses 2;
+		    
+		    # 指定缓存的key
+		    proxy_cache_key $schema$host$uri$is_args$args;
+		    # 缓存的HTTP请求方法类型
+		    proxy_cache_methods GET HEAD;
+		    # 添加一个响应头，用来表示请求中是否命中缓存
+		    add_header N-Cache-Status $upstream_cache_status;
+		    
+		    # 设置为on表示允许将请求的HEAD方法改成GET方法进行缓存
+		    proxy_cache_convert_head on;
+		    
+		    ## 性能优化的部分，热数据和冷数据缓存失效的解决方案
+		    # 当缓存未命中时，提供过期缓存给客户端（前提是有过期缓存），并开启子请求去更新缓存
+		    proxy_cache_background_update on;
+		    # 当缓存未命中时，设置使用过期缓存触发条件
+		    proxy_cache_use_stale error timeout invalid_header updating http_502 http_503 http_504;
+		    # 当缓存未命中时，同一时间的相同请求智慧回源一条到后端服务器上
+		    # 其他请求会继续等待，直到第一条请求拿回数据
+		    proxy_cache_lock on;
+		    # 获取请求的超时时间，如果超时，所有等待中的请求都会回源到后端服务器，所以超时时间不建议设置太短
+		    proxy_cache_lock_timeout 20; # 单位为秒
+		    # 当响应头中包含Set-Cookie或者当响应头有Vary且有特殊值为*时，那么不会被缓存，为了应对这种响应的缓存需要用到下面的设置
+		    proxy_ignore_headers Vary Set-Cookie;
+		    
+		    proxy_set_header Host $host:$server_port;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            
+		    # 当缓存丢失时，会去后端服务器获取数据，然后，将之返回给用户并进行缓存
+            proxy_pass http://test_servers;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   /storage/tmp;
+        }
+
+    }
+
+}

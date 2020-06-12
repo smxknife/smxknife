@@ -16,7 +16,7 @@ public class _Run_interrupt_unblocked_enabled {
 		Thread thread = Executors.defaultThreadFactory().newThread(new ThreadInterruptUnblockedEnabled());
 
 		thread.start();
-		TimeUnit.SECONDS.sleep(10);
+		TimeUnit.SECONDS.sleep(2);
 		thread.interrupt();
 	}
 }

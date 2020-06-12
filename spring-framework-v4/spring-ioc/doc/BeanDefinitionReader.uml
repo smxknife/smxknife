@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.beans.factory.support.BeanDefinitionReader</OriginalElement>
+  <nodes>
+    <node x="252.00000000000003" y="160.0">org.springframework.beans.factory.support.PropertiesBeanDefinitionReader</node>
+    <node x="232.14285714285717" y="240.0">org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader</node>
+    <node x="0.0" y="160.0">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</node>
+    <node x="368.34523809523813" y="0.0">org.springframework.beans.factory.support.BeanDefinitionReader</node>
+    <node x="156.34523809523813" y="0.0">org.springframework.core.env.EnvironmentCapable</node>
+    <node x="260.0" y="80.0">org.springframework.beans.factory.support.AbstractBeanDefinitionReader</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.beans.factory.support.PropertiesBeanDefinitionReader" target="org.springframework.beans.factory.support.AbstractBeanDefinitionReader">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader" target="org.springframework.beans.factory.support.AbstractBeanDefinitionReader">
+      <point x="64.0" y="-15.0" />
+      <point x="424.14285714285717" y="215.0" />
+      <point x="550.5" y="215.0" />
+      <point x="550.5" y="135.0" />
+      <point x="486.66666666666674" y="135.0" />
+      <point x="90.66666666666669" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.beans.factory.support.AbstractBeanDefinitionReader">
+      <point x="0.0" y="-15.0" />
+      <point x="116.0" y="135.0" />
+      <point x="305.33333333333337" y="135.0" />
+      <point x="-90.66666666666669" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" target="org.springframework.beans.factory.support.BeanDefinitionReader">
+      <point x="68.0" y="-15.0" />
+      <point x="464.0" y="55.0" />
+      <point x="472.34523809523813" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader" target="org.springframework.beans.factory.xml.XmlBeanDefinitionReader">
+      <point x="-64.0" y="-15.0" />
+      <point x="296.14285714285717" y="215.0" />
+      <point x="116.0" y="215.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" target="org.springframework.core.env.EnvironmentCapable">
+      <point x="-68.0" y="-15.0" />
+      <point x="328.0" y="55.0" />
+      <point x="252.34523809523813" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="502.5" y="295.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

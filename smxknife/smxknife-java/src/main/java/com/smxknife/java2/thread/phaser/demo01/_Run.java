@@ -14,7 +14,7 @@ public class _Run {
 
 			@Override
 			protected boolean onAdvance(int phase, int registeredParties) {
-				System.out.println("phase = " + phase + " registeredParties = " + registeredParties);
+				System.out.println(Thread.currentThread().getName() + " | phase = " + phase + " registeredParties = " + registeredParties);
 
 				return false;
 				// return super.onAdvance(phase, registeredParties);

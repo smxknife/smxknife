@@ -49,7 +49,23 @@
 		<module>smxknife-leakcanary</module>
 		<module>smxknife-xnio</module>
 		<module>smxknife-axis</module>
-	</modules>
+		<module>smxknife-easypoi</module>
+		<module>smxknife-zookeeper</module>
+        <module>smxknife-dubbo</module>
+		<module>smxknife-spring</module>
+        <module>smxknife-apollo</module>
+        <module>smxknife-modbus</module>
+        <module>smxknife-openjdkloom</module>
+        <module>smxknife-disruptor</module>
+        <module>smxknife-threadpattern</module>
+        <module>smxknife-rabbitmq</module>
+        <module>smxknife-rocketmq</module>
+        <module>smxknife-mq</module>
+        <module>smxknife-springboot</module>
+        <module>smxknife-cache</module>
+        <module>smxknife-drools</module>
+        <module>smxknife-javaagent</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -64,6 +80,12 @@
             <version>${projectlombok.version}</version>
             <scope>provided</scope>
         </dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.4.2</version>
+			<scope>test</scope>
+		</dependency>
     </dependencies>
 
     <repositories>

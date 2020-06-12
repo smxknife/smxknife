@@ -1,5 +1,7 @@
 package com.smxknife.java2.thread.thread._04sleep;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -11,13 +13,15 @@ public class _Run {
 		_Run run = new _Run();
 		ThreadGroup group = new ThreadGroup("MyGroup");
 		SyncObj syncObj = run.new SyncObj();
-		for (int i = 0; i < 3; i++) {
-			new Thread(group, () -> {
+		ExecutorService executorService = Executors.newFixedThreadPool(3);
+		for (int i = 0; i < 5; i++) {
+			Thread thread = new Thread(group, () -> {
 				while (true) {
 					System.out.println(Thread.currentThread().getName() + " - activeCount : " + group.activeCount());
 					syncObj.sleep();
 				}
-			}, "th-" + i).start();
+			}, "th-" + i);
+			executorService.submit(thread);
 		}
 	}
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.smxknife.spring.ioc.xml.Model</OriginalElement>
+  <nodes>
+    <node x="160.0" y="80.0">org.springframework.core.io.ResourceLoader</node>
+    <node x="262.0" y="160.0">org.springframework.beans.factory.support.BeanDefinitionReader</node>
+    <node x="0.0" y="80.0">org.springframework.beans.factory.BeanFactory</node>
+    <node x="372.0" y="0.0">org.springframework.beans.factory.config.BeanDefinition</node>
+    <node x="340.0" y="80.0">org.springframework.beans.factory.support.BeanDefinitionRegistry</node>
+    <node x="36.0" y="160.0">org.springframework.context.ApplicationContext</node>
+    <node x="184.0" y="0.0">org.springframework.core.io.Resource</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.context.ApplicationContext" target="org.springframework.beans.factory.BeanFactory">
+      <point x="-48.0" y="-15.0" />
+      <point x="84.0" y="135.0" />
+      <point x="68.0" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.context.ApplicationContext" target="org.springframework.core.io.ResourceLoader">
+      <point x="48.0" y="-15.0" />
+      <point x="180.0" y="135.0" />
+      <point x="200.0" y="135.0" />
+      <point x="-40.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="282.0" y="95.0" />
+  <SelectedNodes>
+    <node>org.springframework.core.io.Resource</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

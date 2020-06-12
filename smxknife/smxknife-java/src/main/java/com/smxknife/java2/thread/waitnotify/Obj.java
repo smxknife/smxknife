@@ -17,6 +17,7 @@ public class Obj {
 		System.out.println(Thread.currentThread().getName() + " enter doWait...");
 		try {
 			TimeUnit.SECONDS.sleep(2);
+			System.out.println("doWait sleep 2 secs, then begin to wait");
 			this.wait();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -29,6 +30,7 @@ public class Obj {
 		this.notify();
 		try {
 			TimeUnit.SECONDS.sleep(2);
+			System.out.println("doNotify sleep 2 secs");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

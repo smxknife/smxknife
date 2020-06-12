@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class ThreadInterruptBlockedDisable implements Runnable {
 	@Override
 	public void run() {
-		while (!Thread.currentThread().isInterrupted()) { // 这样处理，可以让线程中断后无法继续执行
+		while (!Thread.currentThread().isInterrupted()) {
 
 			/**
 			 * 通过下面三组输出可以发现，调用interrupt之后，并没有改变当前线程的状态，所以也可以理解了为什么while的循环条件可以一直为真

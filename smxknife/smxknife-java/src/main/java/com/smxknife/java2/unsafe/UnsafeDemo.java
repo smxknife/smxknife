@@ -108,6 +108,7 @@ public class UnsafeDemo {
 	private static void allocateMemory(Unsafe unsafe) {
 		System.out.println("allocateMemory test --------------");
 		// TODO 这里存在疑问，一直没找到解答，这里分配了1字节的内存，为什么下面可以存储4字节的int数据
+		// TODO 答：这里分配的内存对应的地址，地址就一个字节
 		long memoryAddress = unsafe.allocateMemory(1);
 		System.out.println(memoryAddress);
 		unsafe.putAddress(memoryAddress, Integer.MAX_VALUE);

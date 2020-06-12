@@ -1,0 +1,3 @@
+java=com.smxknife.dubbo.provider.xml.service.impl.JavaSpiService
+spring=com.smxknife.dubbo.provider.xml.service.impl.SpringSpiService
+other=com.smxknife.dubbo.provider.xml.service.impl.OtherSpiService

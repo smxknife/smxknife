@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	   default-autowire="byType">
+
+	<bean id="interfaceTest" class="com.smxknife.spring.ignoredependency.inter.InterfaceTest">
+<!--		<property name="ignoreInterface" ref="interfaceImpl"></property>-->
+	</bean>
+	<bean id="interfaceImpl" class="com.smxknife.spring.ignoredependency.inter.IgnoreInterfaceImpl"></bean>
+	<bean id="typeTest" class="com.smxknife.spring.ignoredependency.type.TypeTest">
+<!--		<property name="ignoreType" ref="typeImpl"></property>-->
+	</bean>
+	<bean id="typeImpl" class="com.smxknife.spring.ignoredependency.type.IgnoreTypeImpl"></bean>
+<!--	<bean id="ignoreTestProcessor" class="com.smxknife.spring.ignoredependency.IgnoreAutowiringProcessor"></bean>-->
+
+</beans>

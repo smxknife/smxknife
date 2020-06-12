@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="myModel" class="com.smxknife.spring.ioc.xml.Model">
+		<property name="propertyA" ref="propertyA"></property>
+	</bean>
+	<bean id="propertyA" class="com.smxknife.spring.ioc.xml.PropertyA"/>
+<!--	<bean id="modelFactoryBean" class="com.smxknife.spring.ioc.xml.ModelFactoryBean"/>-->
+</beans>

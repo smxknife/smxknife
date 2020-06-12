@@ -1,0 +1,11 @@
+CACHE MANIFEST
+# 2020-05-28 v1.5
+/test.jpg
+/jquery-3.3.1.min.js
+/cache/index.css
+
+NETWORK:
+*
+
+FALLBACK:
+/ /offline.html
