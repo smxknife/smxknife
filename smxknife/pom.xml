@@ -65,6 +65,7 @@
         <module>smxknife-cache</module>
         <module>smxknife-drools</module>
         <module>smxknife-javaagent</module>
+        <module>smxknife-st4</module>
     </modules>
 
     <properties>
