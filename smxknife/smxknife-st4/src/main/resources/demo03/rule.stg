@@ -1,0 +1,20 @@
+contextTemp(package, imports, rules)
+::=<<
+package <package>
+
+import <imports;separator=";\r\nimport ">;
+
+<rules:{rule|<ruleTemp(rule.name, rule.condition, rule.action)>};separator="\r\n">
+>>
+
+ruleTemp(name, condition, action)
+::=<<
+rule "<name>"
+    when
+        <condition>
+    then
+        <if(action)>
+            <action>
+        <endif>
+end
+>>

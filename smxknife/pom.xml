@@ -66,6 +66,7 @@
         <module>smxknife-drools</module>
         <module>smxknife-javaagent</module>
         <module>smxknife-st4</module>
+        <module>smxknife-rulengine</module>
     </modules>
 
     <properties>

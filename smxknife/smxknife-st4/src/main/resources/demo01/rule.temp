@@ -1,5 +1,5 @@
 rule(ruleName, condition, then) ::=<<
-测试<ruleName>
+测试<ruleName;separator="-">
 测试<condition>
 测试<then>
 >>

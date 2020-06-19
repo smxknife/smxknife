@@ -41,6 +41,8 @@ public class Main2 {
 		InternalKnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
 		Collection<KiePackage> pkgs = kbuilder.getKnowledgePackages();
 		kbase.addPackages(pkgs);
+
+
 		KieSession kieSession = kbase.newKieSession();
 		Product fan = new Product("电扇", 280);
 		Product washer = new Product("洗衣机",2200);
@@ -49,9 +51,18 @@ public class Main2 {
 		kieSession.insert(washer);
 		kieSession.insert(phone);
 		kieSession.fireAllRules();
-		kieSession.dispose();
 
 		System.out.println("-------------");
+
+		System.out.println("--------------");
+		System.out.println(kieSession.getIdentifier());
+		System.out.println(kieSession.getEntryPointId());
+		kieSession.getFactHandles().forEach(handle -> System.out.println(handle.toExternalForm()));
+		System.out.println(">>>>");
+		//kSession.getProcessInstances().stream().forEach(processInstance -> System.out.println(processInstance.getProcessName()));
+		System.out.println("--------------");
+
+		kieSession.dispose();
 
 		System.out.println(fan.getRealPrice());
 		System.out.println(washer.getRealPrice());

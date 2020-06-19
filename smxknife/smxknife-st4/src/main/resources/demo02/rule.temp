@@ -1,0 +1,17 @@
+/**模板外注释sql模板*/
+sqlTemplate(columns,condition,joinKey,tableName,childColumns,childJoinKey,childTableName,childCdtion)
+::= <<
+<! 模板内注释 !>
+select <columns;separator=",">,<childColumns:{item|t2.<item>};separator=",">
+from <tableName> as t1 left join (<childSqlTemplate(childColumns, childCdtion)>) as t2 on t1.<joinKey>=t2.<childJoinKey>
+where 1=1 <if(condition)>and <condition><endif>
+>>
+
+/**模板外注释sql子模板*/
+
+childSqlTemplate(childColumns, childCdtion)
+::= <<
+select <childColumns;separator=",">
+from <childTableName>
+where 1=1 <if(childCdtion)>and <childCdtion><endif>
+>>

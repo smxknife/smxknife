@@ -1,0 +1,47 @@
+package itemconfig
+
+import com.smxknife.drools.demo03.ItemConfig;
+
+rule "行业编码是C31"
+    salience 1
+    when
+        $tc:ItemConfig(industryCode matches "C31.*")
+    then
+        $tc.addRule(drools.getRule().getName());
+end
+
+rule "行业编码是C31 并且不在上下限范围0 - 1000"
+    salience 2
+    when
+        $tc:ItemConfig(industryCode matches "C31.*", value < 0 || value > 1000)
+    then
+        $tc.addRule(drools.getRule().getName());
+        $tc.setValue(500);
+end
+
+rule "行业编码是C311"
+    salience 3
+    when
+        $tc:ItemConfig(industryCode matches "C311.*")
+    then
+        $tc.addRule(drools.getRule().getName());
+        drools.halt();
+end
+
+rule "行业编码是C311 并且不在上下限范围0 - 1000"
+    salience 4
+    when
+        $tc:ItemConfig(industryCode matches "C311.*", value < 0 || value > 1000)
+    then
+        $tc.addRule(drools.getRule().getName());
+        $tc.setValue(500);
+end
+
+rule "企业编码是00000000"
+    salience 4
+    when
+        $tc:ItemConfig(entCode == "00000000", value < 0 || value > 600)
+    then
+        $tc.addRule(drools.getRule().getName());
+        $tc.setValue(300);
+end
