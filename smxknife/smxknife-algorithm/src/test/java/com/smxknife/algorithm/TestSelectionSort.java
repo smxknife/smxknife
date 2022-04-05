@@ -1,6 +1,6 @@
 package com.smxknife.algorithm;
 
-import com.smxknife.algorithm.selectionsort.SelectionSort;
+import com.smxknife.algorithm.demo01.selectionsort.SelectionSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

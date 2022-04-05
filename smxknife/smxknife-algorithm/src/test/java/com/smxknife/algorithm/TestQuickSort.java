@@ -1,6 +1,6 @@
 package com.smxknife.algorithm;
 
-import com.smxknife.algorithm.quicksort.QuickSort;
+import com.smxknife.algorithm.demo01.quicksort.QuickSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

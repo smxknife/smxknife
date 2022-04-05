@@ -1,0 +1,12 @@
+let a = 99;
+let b = 0xFF;
+let c = -99;
+
+println(a);
+println(b);
+println(a + b);
+println(a / b);
+println(a- b + c);
+println(a + b * c);
+println(a- (b - c));
+println(a/b * b + a % b);

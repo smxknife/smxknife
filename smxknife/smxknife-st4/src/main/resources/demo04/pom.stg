@@ -1,0 +1,7 @@
+pomContext(parent, module)
+::=<<
+<groupId>$parent.groupId$</groupId>
+$if(module.groupId)$
+    <groupId>$module.groupId$<groupId>
+$endif$
+>>

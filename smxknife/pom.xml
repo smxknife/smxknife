@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>smxknife-java</module>
+        <!-- <module>smxknife-java</module> -->
         <module>smxknife-cassandra</module>
         <module>smxknife-quartz</module>
         <module>smxknife-jmx</module>
@@ -67,12 +67,26 @@
         <module>smxknife-javaagent</module>
         <module>smxknife-st4</module>
         <module>smxknife-rulengine</module>
+        <module>smxknife-zuul2</module>
+        <module>smxknife-druid</module>
+        <module>smxknife-TDD</module>
+        <module>smxknife-kafka</module>
+        <module>smxknife-aviator</module>
+        <module>smxknife-bytebuddy</module>
+        <module>smxknife-springdatajpa</module>
+        <module>smxknife-mapstruct</module>
+        <module>smxknife-mybatis-plus</module>
+        <module>smxknife-transaction</module>
+        <module>smxknife-msb</module>
+        <module>smxknife-jdbc</module>
+        <module>smxknife-hbase</module>
+        <module>smxknife-lock</module>
     </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <projectlombok.version>1.18.2</projectlombok.version>
+        <projectlombok.version>1.18.16</projectlombok.version>
     </properties>
 
     <dependencies>
@@ -86,7 +100,7 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<version>5.4.2</version>
-			<scope>test</scope>
+<!--			<scope>test</scope>-->
 		</dependency>
     </dependencies>
 

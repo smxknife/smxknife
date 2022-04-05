@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--  resource和url不能同时指定  -->
+    <!--
+        <properties resource="user.properties">
+            <property name="hello" value="world"/>
+        </properties>
+    -->
+
+    <!--
+        <properties url="file:///Users/ShaoYun/local/workstation/programs/smxknife/smxknife-mybatis/src/main/resources/url.properties">
+            <property name="hello" value="world"/>
+        </properties>
+    -->
+
+    <!--  settings标签的配置是配置 MyBatis 框架运行时的一些行为的，例如缓存、延迟加载、结果集控制、执行器、分页设置、命名规则等一系列控制性参数，其所有的 setting 配置都放在父标签 settings 标签中  -->
+    <settings>
+        <!--    是否使用缓存    -->
+        <setting name="cacheEnabled" value="true"/>
+        <!--    是否开启延迟加载    -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--    是否开启按需加载    -->
+        <setting name="aggressiveLazyLoading" value="true"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="useColumnLabel" value="true"/>
+        <setting name="useGeneratedKeys" value="false"/>
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
+        <setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="30"/>
+        <setting name="defaultFetchSize" value="200"/>
+        <setting name="safeRowBoundsEnabled" value="false"/>
+        <setting name="mapUnderscoreToCamelCase" value="false"/>
+        <setting name="localCacheScope" value="SESSION"/>
+        <setting name="jdbcTypeForNull" value="OTHER"/>
+        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+    </settings>
+
+
+
+    <typeAliases>
+        <typeAlias type="com.smxknife.mybatis._comm.po.Blog" alias="Blog"/>
+        <typeAlias type="com.smxknife.mybatis._comm.po.Author" alias="Author"/>
+        <package name="com.smxknife.mybatis._comm.po"/>
+    </typeAliases>
+
+    <!--  在 MyBatis 中，当其 sql 映射配置文件中的 sql 语句所得到的查询结果，被动态映射到 resultType 或其他处理结果集的参数配置对应的 Java 类型，其中就有 JavaBean 等封装类。而 objectFactory 对象工厂就是用来创建实体对象的类  -->
+    <objectFactory type="com.smxknife.mybatis._01_xml.MyObjectFactory"></objectFactory>
+
+    <plugins>
+        <plugin interceptor="com.smxknife.mybatis._01_xml.ExecutorPlugin"></plugin>
+        <plugin interceptor="com.smxknife.mybatis._01_xml.ParameterHandlerPlugin"></plugin>
+        <plugin interceptor="com.smxknife.mybatis._01_xml.ResultSetHandlerPlugin"></plugin>
+        <plugin interceptor="com.smxknife.mybatis._01_xml.AllPlugin"></plugin>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mappers/BlogMapper.xml" />
+        <mapper resource="mappers/AuthorMapper.xml" />
+        <package name="mappers"/>
+    </mappers>
+
+</configuration>

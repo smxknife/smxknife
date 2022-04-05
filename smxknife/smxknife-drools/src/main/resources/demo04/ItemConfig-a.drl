@@ -1,0 +1,23 @@
+package itemconfig
+
+import com.smxknife.drools.demo04.ItemConfig3;
+import com.smxknife.drools.demo04.ItemConfig2;
+
+rule "行业编码是C31_28888888888"
+//    salience 2
+    when
+        $tc:ItemConfig3(entCode == "00000000")
+    then
+        System.out.println("xxxx");
+        $tc.addRule(drools.getRule().getName());
+end
+
+rule "行业编码是C31_28888"
+//    salience 2
+    when
+        $tc:ItemConfig2(entCode == "00000001")
+    then
+        System.out.println("xxxx");
+        $tc.addRule(drools.getRule().getName());
+end
+

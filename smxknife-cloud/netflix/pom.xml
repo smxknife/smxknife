@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>smxknife-cloud</artifactId>
+        <groupId>com.smxknife.cloud</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.smxknife.cloud.netflix</groupId>
+    <artifactId>netflix</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>eureka-server</module>
+        <module>eureka-provider</module>
+        <module>eureka-consumer</module>
+        <module>user-provider</module>
+        <module>user-api</module>
+        <module>user-consumer</module>
+        <module>eureka-gateway</module>
+        <module>eureka-zuul</module>
+        <module>admin-server</module>
+        <module>order-service</module>
+        <module>pay-service</module>
+        <module>lcntx-manager</module>
+        <module>lcntx-order-service</module>
+        <module>lcntx-pay-service</module>
+        <module>seata-order-service</module>
+        <module>seata-account-service</module>
+        <module>seata-storage-service</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>

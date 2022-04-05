@@ -1,6 +1,6 @@
 package com.smxknife.algorithm;
 
-import com.smxknife.algorithm.recursive.Recursive;
+import com.smxknife.algorithm.demo01.recursive.Recursive;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

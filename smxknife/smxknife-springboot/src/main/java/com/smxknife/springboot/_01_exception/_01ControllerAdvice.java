@@ -3,7 +3,6 @@ package com.smxknife.springboot._01_exception;
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,7 +15,7 @@ import java.util.Locale;
  * 2020/6/6
  */
 @Component
-@ControllerAdvice
+//@ControllerAdvice
 public class _01ControllerAdvice {
 
 	@ExceptionHandler(NotFoundPageException.class)

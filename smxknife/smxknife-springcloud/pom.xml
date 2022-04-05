@@ -15,6 +15,7 @@
     <modules>
         <module>smxknife-springcloud-dataflow</module>
         <module>smxknife-springcloud-netflix</module>
+        <module>smxknife-springcloud-alibaba</module>
     </modules>
 
 </project>

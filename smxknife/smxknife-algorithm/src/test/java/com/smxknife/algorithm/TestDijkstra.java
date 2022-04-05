@@ -1,6 +1,6 @@
 package com.smxknife.algorithm;
 
-import com.smxknife.algorithm.dijkstra.Dijkstra;
+import com.smxknife.algorithm.demo01.dijkstra.Dijkstra;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedHashMap;

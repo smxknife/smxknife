@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package dws;
+option java_package = "com.smxknife.hbase";
+
+message EnergyData {
+    string energyCode = 1;
+    string regionCode = 2;
+    string industryCode = 3;
+    string domainCode = 4;
+    string dataCode = 5;
+    double dataValue = 6;
+    int64 dataTime = 7;
+}

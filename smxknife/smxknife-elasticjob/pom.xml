@@ -11,6 +11,11 @@
 
     <groupId>com.smxknife</groupId>
     <artifactId>smxknife-elasticjob</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>smxknife-elasticjob-lite</module>
+        <module>smxknife-elasticjob-extend</module>
+    </modules>
 
 
 </project>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smxknife.mybatis.demo.ch01_fromxml.mapper.BlogMapper">
+
+    <!--  定义映射规则  -->
+    <resultMap id="detailedResultMap" type="Blog">
+
+        <!--   构造函数映射   -->
+<!--        <constructor>-->
+<!--            &lt;!&ndash;    这里要求Blog类必须要有一个构造函数        &ndash;&gt;-->
+<!--            <idArg column="blog_id" javaType="long"/>-->
+<!--        </constructor>-->
+        <id column="blog_id" property="id"/>
+
+        <!--    属性映射    -->
+        <result property="title" column="blog_title"/>
+
+        <!--    对象属性映射，嵌套映射    -->
+        <association property="author" resultMap="authorResult"/>
+
+        <!--    集合映射，匿名的嵌套映射    -->
+        <collection property="posts" ofType="Post">
+            <id property="id" column="post_id"/>
+            <result property="content" column="post_content"/>
+            <association property="author" resultMap="authorResult"/>
+        </collection>
+    </resultMap>
+
+    <resultMap id="authorResult" type="Author">
+        <id property="id" column="author_id"/>
+        <result property="username" column="author_username"/>
+        <result property="password" column="author_password"/>
+        <result property="email" column="author_email"/>
+    </resultMap>
+    
+    <select id="selectBlogDetail" resultMap="detailedResultMap">
+        select
+            B.id as blog_id, B.title as blog_title, B.author_id as blog_author_id,
+            A.id as author_id, A.username as author_username, A.password as author_password, A.email as author_email,
+            P.id as post_id, P.blog_id as post_blog_id, P.content as post_content
+        from Blog B left join Author A on B.author_id = A.id
+                    left join Post P on B.id = P.blog_id
+        where B.id = #{id}
+    </select>
+
+    <select id="selectBlog" resultType="Blog">
+        select * from Blog where id = #{id}
+    </select>
+</mapper>

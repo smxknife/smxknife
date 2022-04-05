@@ -1,0 +1,3 @@
+impl=com.smxknife.energy.services.provider.ExtServiceImpl
+dev1=com.smxknife.energy.services.provider.ExtServiceDev
+prod=com.smxknife.energy.services.provider.ExtServiceProd

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!--    是否使用缓存    -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias type="com.smxknife.mybatis._comm.po.Blog" alias="Blog"/>
+        <typeAlias type="com.smxknife.mybatis._comm.po.Author" alias="Author"/>
+    </typeAliases>
+
+    <!--  在 MyBatis 中，当其 sql 映射配置文件中的 sql 语句所得到的查询结果，被动态映射到 resultType 或其他处理结果集的参数配置对应的 Java 类型，其中就有 JavaBean 等封装类。而 objectFactory 对象工厂就是用来创建实体对象的类  -->
+    <objectFactory type="com.smxknife.mybatis._01_xml.MyObjectFactory"></objectFactory>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mappers/BlogMapper.xml" />
+        <mapper resource="mappers/AuthorMapper.xml" />
+    </mappers>
+
+</configuration>

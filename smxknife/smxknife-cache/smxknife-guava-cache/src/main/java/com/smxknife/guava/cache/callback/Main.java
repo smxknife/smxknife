@@ -24,6 +24,8 @@ public class Main {
 					@Override
 					public Object call() throws Exception {
 						System.out.println(Thread.currentThread().getName() + " call");
+						TimeUnit.SECONDS.sleep(3);
+						//throw new RuntimeException(Thread.currentThread().getName() + " | mock exception");
 						return "hello";
 					}
 				});

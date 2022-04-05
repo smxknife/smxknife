@@ -13,6 +13,7 @@ public class Demo1Main {
 //		System.out.println("instanceId: " + scheduler.getSchedulerInstanceId());
 //		System.out.println("meta: " + scheduler.getMetaData());
 //		System.out.println("context: " + scheduler.getContext());
+		scheduler.start();
 
 		// 声明一个JobDetail，并将MyJob绑定
 		JobDetail jobDetail = JobBuilder.newJob(MyJob.class)
@@ -31,7 +32,7 @@ public class Demo1Main {
 				.build();
 
 		scheduler.scheduleJob(jobDetail, trigger);
-		scheduler.start();
+
 
 		try {
 			TimeUnit.MINUTES.sleep(1);

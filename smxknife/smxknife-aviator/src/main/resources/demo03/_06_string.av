@@ -1,0 +1,21 @@
+let a = "hello world";
+
+println(a);
+println(string.length(a));
+println('b');
+println('a' + ", " + 'c');
+println('a' + 1 + 'c');
+
+println('Dennis\'s car');
+println('AviatorScript is great.\r\nLet\'s try it!');
+
+let name = "aviator";
+let s = "hello," + name;
+
+println(s);
+
+let name = "aviator";
+let a = 1;
+let b = 2;
+let s = "hello, #{name}, #{a} + #{b} = #{a + b}";
+p(s);

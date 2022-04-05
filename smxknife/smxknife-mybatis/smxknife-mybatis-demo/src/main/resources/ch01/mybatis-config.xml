@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties> <!--定义属性值-->
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+        <property name="id" value="123"/>
+    </properties>
+<!--    <settings> &lt;!&ndash;全局属性配置&ndash;&gt;-->
+<!--        &lt;!&ndash; <setting name="cacheEnable" value="true"/> cacheEnable说不存在，难道不存在不会自动跳过吗？&ndash;&gt;-->
+<!--    </settings>-->
+    <typeAliases> <!--配置别名-->
+        <!--    可以在映射文件中直接使用Blog代替com.smxknife.....Blog    -->
+        <typeAlias type="com.smxknife.mybatis.demo.ch01_fromxml.model.Blog" alias="Blog"/>
+        <typeAlias type="com.smxknife.mybatis.demo.ch01_fromxml.model.Post" alias="Post"/>
+        <typeAlias type="com.smxknife.mybatis.demo.ch01_fromxml.model.Author" alias="Author"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <!--      配置事务管理器类型      -->
+            <transactionManager type="JDBC"/>
+            <!--      配置数据源类型，以及数据库连接的基本信息     -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--  配置映射文件的位置  -->
+    <mappers>
+        <mapper resource="ch01/mapper/BlogMapper.xml" />
+        <package name="aaaaaa"/>
+    </mappers>
+</configuration>

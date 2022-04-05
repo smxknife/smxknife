@@ -9,7 +9,8 @@ import java.io.Serializable;
 public class Mode_LazyInitialization implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Mode_LazyInitialization() {}
+	private Mode_LazyInitialization() {
+	}
 
 	private static class LazyInitializationHolder {
 		private static final Mode_LazyInitialization INSTANCE = new Mode_LazyInitialization();

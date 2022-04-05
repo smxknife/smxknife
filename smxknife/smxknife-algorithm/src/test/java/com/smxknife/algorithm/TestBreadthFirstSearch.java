@@ -1,7 +1,7 @@
 package com.smxknife.algorithm;
 
-import com.smxknife.algorithm.breadthfirstsearch.BreadthFirstSearch;
-import com.smxknife.algorithm.breadthfirstsearch.Relation;
+import com.smxknife.algorithm.demo01.breadthfirstsearch.BreadthFirstSearch;
+import com.smxknife.algorithm.demo01.breadthfirstsearch.Relation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

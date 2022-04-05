@@ -2,4 +2,7 @@
     <kbase name="kbase1" packages="demo01.rules">
         <ksession name="ksession1" />
     </kbase>
+    <kbase name="kbase2">
+        <ksession name="itemConfig" type="stateless"/>
+    </kbase>
 </kmodule>

@@ -1,0 +1,93 @@
+version: '3.7'
+
+networks:
+  micro-service:
+    external: true
+
+services:
+  kafka1:
+    image: wurstmeister/kafka
+    restart: unless-stopped
+    container_name: kafka1
+    ports:
+      - "30001:9092"
+    external_links:
+      - zoo1
+      - zoo2
+      - zoo3
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ADVERTISED_HOST_NAME: 172.21.0.15
+      KAFKA_ADVERTISED_PORT: 30001
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://172.21.0.15:30001
+      KAFKA_ZOOKEEPER_CONNECT: "zoo1:2181/kafka,zoo2:2181/kafka,zoo3:2181/kafka"
+    volumes:
+      - "./kafka/kafka1/docker.sock:/var/run/docker.sock"
+      - "./kafka/kafka1/data/:/kafka"
+    networks:
+      - micro-service
+
+  kafka2:
+    image: wurstmeister/kafka
+    restart: unless-stopped
+    container_name: kafka2
+    ports:
+      - "30002:9092"
+    external_links:
+      - zoo1
+      - zoo2
+      - zoo3
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ADVERTISED_HOST_NAME: 172.21.0.15
+      KAFKA_ADVERTISED_PORT: 30002
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://172.21.0.15:30002
+      KAFKA_ZOOKEEPER_CONNECT: "zoo1:2181/kafka,zoo2/kafka:2181/kafka,zoo3:2181/kafka"
+    volumes:
+      - "./kafka/kafka2/docker.sock:/var/run/docker.sock"
+      - "./kafka/kafka2/data/:/kafka"
+    networks:
+      - micro-service
+
+  kafka3:
+    image: wurstmeister/kafka
+    restart: unless-stopped
+    container_name: kafka3
+    ports:
+      - "30003:9092"
+    external_links:
+      - zoo1
+      - zoo2
+      - zoo3
+    environment:
+      KAFKA_BROKER_ID: 3
+      KAFKA_ADVERTISED_HOST_NAME: 172.21.0.15
+      KAFKA_ADVERTISED_PORT: 30003
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://172.21.0.15:30003
+      KAFKA_ZOOKEEPER_CONNECT: "zoo1:2181/kafka,zoo2/kafka:2181/kafka,zoo3:2181/kafka"
+    volumes:
+      - "./kafka/kafka3/docker.sock:/var/run/docker.sock"
+      - "./kafka/kafka3/data/:/kafka"
+    networks:
+      - micro-service
+
+  kafka-manager:
+    image: sheepkiller/kafka-manager:latest
+    restart: unless-stopped
+    container_name: kafka-manager
+    hostname: kafka-manager
+    ports:
+      - "39000:9000"
+    links:
+      - kafka1
+      - kafka2
+      - kafka3
+    external_links:
+      - zoo1
+      - zoo2
+      - zoo3
+    environment:
+      ZK_HOSTS: zoo1:2181/kafka,zoo2:2181/kafka,zoo3:2181/kafka
+      TZ: CST-8
+    networks:
+      - micro-service

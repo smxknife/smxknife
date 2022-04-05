@@ -1,0 +1,114 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: flowable
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/flowable2?characterEncoding=UTF-8&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+flowable:
+  labelFontName: 宋体
+  activityFontName: 宋体
+  annotationFontName: 宋体
+  rest:
+    app:
+      authentication-mode: verify-privilege
+  process:
+    definition-cache-limit: 1
+  idm:
+    app:
+      admin:
+        password: test
+        user-id: admin
+        first-name: admin
+        last-name: admin
+  common:
+    app:
+      role-prefix:
+      idm-url: http://localhost:${server.port}/${spring.application.name}/idm
+  xml:
+    encoding: UTF-8
+  modeler:
+    app:
+      rest-enabled: true
+  admin:
+    app:
+      security:
+        encryption:
+          credentials-secret-spec: 9FGl73ngxcOoJvmL
+          credentials-i-v-spec: j8kdO2hejA9lKmm6
+      server-config:
+        app:
+          context-root: ${spring.application.name}
+          password: test
+          server-address: http://localhost
+          user-name: admin
+          port: ${server.port}
+          rest-root: app-api
+          name: Flowable App app
+          description: Flowable App REST config
+        process:
+          context-root: ${spring.application.name}
+          server-address: http://localhost
+          password: test
+          user-name: admin
+          rest-root: process-api
+          port: ${server.port}
+          name: Flowable Process app
+          description: Flowable Process REST config
+        form:
+          context-root: ${spring.application.name}
+          server-address: http://localhost
+          password: test
+          user-name: admin
+          port: ${server.port}
+          rest-root: form-api
+          name: Flowable Form app
+          description: Flowable Form REST config
+        dmn:
+          context-root: ${spring.application.name}
+          server-address: http://localhost
+          password: test
+          user-name: admin
+          port: ${server.port}
+          rest-root: dmn-api
+          name: Flowable DMN app
+          description: Flowable DMN REST config
+        cmmn:
+          context-root: ${spring.application.name}
+          password: test
+          server-address: http://localhost
+          user-name: admin
+          port: ${server.port}
+          rest-root: cmmn-api
+          name: Flowable CMMN app
+          description: Flowable CMMN REST config
+        content:
+          context-root: ${spring.application.name}
+          server-address: http://localhost
+          password: test
+          user-name: admin
+          rest-root: content-api
+          port: ${server.port}
+          name: Flowable Content app
+          description: Flowable Content REST config
+  database-schema-update: true
+management:
+  endpoint:
+    health:
+      roles: access-admin
+      show-details: when_authorized
+  endpoints:
+    jmx:
+      unique-names: true
+# MyBatis配置比较重要，手动去扫描Flowable默认的Mapper.xml，以及设置字段类型
+#mybatis:
+#  mapper-locations:
+#    - classpath:/META-INF/admin-mybatis-mappings/*.xml
+#    - classpath:/META-INF/modeler-mybatis-mappings/*.xml
+#  configuration-properties:
+#    prefix:
+#    boolValue: TRUE
+#    blobType: BLOB
